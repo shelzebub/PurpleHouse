@@ -11,7 +11,7 @@ function houseFront() {
     ctx.lineTo(275, 325);
     ctx.closePath();
     ctx.fill();
-    
+
 }
 
 function houseBack() {
@@ -29,10 +29,36 @@ function houseBack() {
 
 }
 
+function roofArc() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#514d52";
+    ctx.beginPath();
+    ctx.arc(187.5, 200, 100, Math.PI * 1, 0, false);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(237.5, 150, 100, Math.PI * 1, 0, false);
+    ctx.closePath();
+    ctx.fill();
+    
+    ctx.fillStyle = "#443f45";;
+    ctx.beginPath();
+    ctx.moveTo(287.5,200);
+    ctx.lineTo(337.5,150);
+    ctx.arc(237.5, 150, 100, 0, (Math.PI* 5 /4), true);
+    ctx.arc(187.5, 200, 100, (Math.PI* 5 /4), 0, false);
+    ctx.closePath();
+    ctx.fill();
+}
+
 function main() {
     //Run main program here.
-    //    houseSides();
+
     houseBack();
     houseFront();
-    
+    roofArc();
+
+
 }
