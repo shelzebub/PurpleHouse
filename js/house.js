@@ -53,16 +53,14 @@ function roofArc() {
     ctx.fill();
 }
 
-function houseBase() {
-    houseBack();
-    houseFront();
-    roofArc();
-    houseDoor();
-    
-}
+
 
 function chimney() {
-    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = "#e574d4";
+    ctx.fillRect(155, 100 , 50, 75);
 }
 
 function houseDoor(){
@@ -72,10 +70,19 @@ function houseDoor(){
     ctx.fillRect(155, 300 , 50, 75);
 }
 
+function houseBase() {
+    houseBack();
+    houseFront();
+    roofArc();
+    houseDoor();
+    
+}
+
 function main() {
     //Run main program here.
 
     houseBase();
+    chimney();
 
 
 }
