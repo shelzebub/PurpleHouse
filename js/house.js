@@ -50,7 +50,7 @@ function frontWall() {
     //triangle part
     
     
-    ctx.beginPath();
+   // ctx.beginPath();
     ctx.moveTo(xLeft,yTop);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
     ctx.lineTo(xRight,yTop);
@@ -82,7 +82,7 @@ function backWall(){
     
     
     //triangle part
-    ctx.beginPath();
+   // ctx.beginPath();
     ctx.moveTo(xLeft2,yTop2);
     ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
     ctx.lineTo(xRight2,yTop2);
@@ -101,6 +101,9 @@ function sideWall(){
     ctx.lineTo(xRight2, yTop2);
     ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
+    ctx.lineTo(xRight, yTop);
+
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
