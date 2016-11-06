@@ -1,3 +1,96 @@
+    
+    //HOUSE WALLS FACING ME
+    var xLeft = 150;
+    var xRight = 250; 
+    var yTop = 275;
+    var yBot = 425
+    //transition of house walls facing me
+    var xChange = 100; 
+    var yChange = 50;
+    //tallnedd of triangle part of wall
+    var tip = 80;
+    
+    
+
+function frontWall() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+  
+    //bottom rectangle
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#ffddcc";
+    ctx.beginPath();
+    ctx.moveTo(xLeft,yTop);
+    ctx.lineTo(xLeft,yBot);
+    ctx.lineTo(xRight,yBot);
+    ctx.lineTo(xRight,yTop);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    //triangle part
+    var xTopOfTriangle = ((xRight - xLeft) / 2)+ xLeft;
+    var yTopOfTriangle  = yTop - tip;
+    
+    
+    ctx.moveTo(xLeft,yTop);
+    ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
+    ctx.lineTo(xRight,yTop);
+    ctx.fill();
+    
+    
+
+}
+
+function backWall(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+   
+    //bottom rectangle
+    
+    var xLeft2 = xLeft + xChange;
+    var xRight2 = xRight + xChange; 
+    var yTop2 = yTop - yChange;
+    var yBot2 = yBot - yChange;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#ffddcc";
+    ctx.beginPath();
+    ctx.moveTo(xLeft2,yTop2);
+    ctx.lineTo(xLeft2,yBot2);
+    ctx.lineTo(xRight2,yBot2);
+    ctx.lineTo(xRight2,yTop2);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //triangle part
+    var xTopOfTriangle = ((xRight2 - xLeft2) / 2)+ xLeft2;
+    var yTopOfTriangle  = yTop2 - tip;
+    
+    
+    ctx.moveTo(xLeft2,yTop2);
+    ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
+    ctx.lineTo(xRight2,yTop2);
+    ctx.fill();
+}
+
+function main() {
+    //Run main program here.
+
+    frontWall();
+    backWall();
+    
+
+}
+
+
+/*
+
 function houseFront() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
@@ -84,5 +177,6 @@ function main() {
     houseBase();
     chimney();
 
-
 }
+
+*/
