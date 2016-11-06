@@ -50,12 +50,13 @@ function frontWall() {
     //triangle part
     
     
-    
+    ctx.beginPath();
     ctx.moveTo(xLeft,yTop);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
     ctx.lineTo(xRight,yTop);
     ctx.stroke();
     ctx.fill();
+    ctx.closePath();
     
     
 
@@ -81,11 +82,13 @@ function backWall(){
     
     
     //triangle part
+    ctx.beginPath();
     ctx.moveTo(xLeft2,yTop2);
     ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
     ctx.lineTo(xRight2,yTop2);
     ctx.stroke()
     ctx.fill();
+    ctx.closePath();
 }
 
 
@@ -93,11 +96,13 @@ function sideWall(){
     var c = document.getElementById("myCanvas");
     var ctx= c.getContext("2d");
     
+    ctx.beginPath();
     ctx.moveTo(xRight, yTop);
     ctx.lineTo(xRight2, yTop2);
     ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
     ctx.stroke();
+    ctx.closePath();
     
 
 
@@ -112,7 +117,7 @@ function main() {
 
     backWall();
     frontWall();
-    //sideWall();
+    sideWall();
    
     
 
