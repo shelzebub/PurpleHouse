@@ -1,21 +1,36 @@
     
-    //HOUSE WALLS FACING ME
+    //front house wall
     var xLeft = 150;
     var xRight = 250; 
     var yTop = 275;
-    var yBot = 425
+    var yBot = 415;
     //transition of house walls facing me
-    var xChange = 100; 
+    var xChange = 75; 
     var yChange = 50;
     //tallnedd of triangle part of wall
-    var tip = 80;
+    var tip = -75;
+
+    //back house wall 
+    var xLeft2 = xLeft + xChange;
+    var xRight2 = xRight + xChange; 
+    var yTop2 = yTop - yChange;
+    var yBot2 = yBot - yChange;
+
+    
+    //triangle part front wall
+    var xTopOfTriangle = ((xRight - xLeft) / 2)+ xLeft;
+    var yTopOfTriangle  = yTop + tip;
+    
+    //triangle partback wall
+    var xTopOfTriangle2 = ((xRight2 - xLeft2) / 2)+ xLeft2;
+    var yTopOfTriangle2  = yTop2 + tip;
+    
     
     
 
 function frontWall() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-
   
     //bottom rectangle
     
@@ -28,17 +43,18 @@ function frontWall() {
     ctx.lineTo(xRight,yBot);
     ctx.lineTo(xRight,yTop);
     ctx.fill();
+    ctx.stroke();
     ctx.closePath();
     
-    ctx.beginPath();
+    
     //triangle part
-    var xTopOfTriangle = ((xRight - xLeft) / 2)+ xLeft;
-    var yTopOfTriangle  = yTop - tip;
+    
     
     
     ctx.moveTo(xLeft,yTop);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
     ctx.lineTo(xRight,yTop);
+    ctx.stroke();
     ctx.fill();
     
     
@@ -52,11 +68,6 @@ function backWall(){
    
     //bottom rectangle
     
-    var xLeft2 = xLeft + xChange;
-    var xRight2 = xRight + xChange; 
-    var yTop2 = yTop - yChange;
-    var yBot2 = yBot - yChange;
-    
     ctx.beginPath();
     ctx.fillStyle = "#ffddcc";
     ctx.beginPath();
@@ -65,25 +76,44 @@ function backWall(){
     ctx.lineTo(xRight2,yBot2);
     ctx.lineTo(xRight2,yTop2);
     ctx.fill();
+    ctx.stroke();
     ctx.closePath();
     
     
     //triangle part
-    var xTopOfTriangle = ((xRight2 - xLeft2) / 2)+ xLeft2;
-    var yTopOfTriangle  = yTop2 - tip;
-    
-    
     ctx.moveTo(xLeft2,yTop2);
-    ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
+    ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
     ctx.lineTo(xRight2,yTop2);
+    ctx.stroke()
     ctx.fill();
+}
+
+
+function sideWall(){
+    var c = document.getElementById("myCanvas");
+    var ctx= c.getContext("2d");
+    
+    ctx.moveTo(xRight, yTop);
+    ctx.lineTo(xRight2, yTop2);
+    ctx.lineTo(xTopOfTriangle2, yTopOfTriangle2);
+    ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
+    ctx.stroke();
+    
+
+
+    
+    
+    
+     
 }
 
 function main() {
     //Run main program here.
 
-    frontWall();
     backWall();
+    frontWall();
+    //sideWall();
+   
     
 
 }
