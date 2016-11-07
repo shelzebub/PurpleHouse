@@ -577,6 +577,29 @@ function sideHouseRight(){
     ctx.stroke();
     ctx.closePath();
     
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //roofpart (front)
     ctx.beginPath();
     ctx.fillStyle = "#fdac84";
@@ -691,6 +714,54 @@ function sideHouseRight(){
 
 }
 
+function sideHousePlanks(){
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    //wood planks for triangle part
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#4d3122"
+    
+    ctx.moveTo(313,232); //TOP RIGHT
+    ctx.lineTo(313,271); //TOP LEFT
+    ctx.stroke();
+    ctx.stroke();
+    ctx.stroke();
+    ctx.fill();
+    //ctx.closePath();
+    
+   // ctx.beginPath();
+    ctx.fillStyle = "#4d3122"
+    
+    ctx.moveTo(309+1,275-1); //TOP RIGHT
+    ctx.lineTo(320-1,265); //TOP LEFT
+    ctx.stroke();
+    ctx.stroke();
+    ctx.fill();
+   // ctx.closePath();
+    
+    ctx.moveTo(309+1,275-1-1); //TOP RIGHT
+    ctx.lineTo(320-1,265-1); //TOP LEFT
+    ctx.stroke();
+    ctx.stroke();
+    ctx.fill();
+   // ctx.closePath();
+    
+     ctx.moveTo(309+1,275-1-2); //TOP RIGHT
+    ctx.lineTo(320-1,265-2); //TOP LEFT
+    ctx.stroke();
+    ctx.stroke();
+    ctx.fill();
+    //ctx.closePath();
+    
+     ctx.moveTo(309+1-1,275-1+1); //TOP RIGHT
+    ctx.lineTo(320-1-1,265+1); //TOP LEFT
+    ctx.stroke();
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+}
 
 
 
@@ -1200,6 +1271,9 @@ function sideWindowEntrance() {
     var yTop = 380-5+3;
     var yBot = 400+3;
     
+   
+    
+    
     ctx.beginPath();
     ctx.fillStyle = "#654a3b";
     ctx.moveTo(xLeft,yTop);//top left
@@ -1225,6 +1299,8 @@ function sideWindowEntrance() {
     
     
     //bottom thingy under the window
+    
+  
     
     var xLeftT = 223+.5+.5;
     var xRightT = 228+.5;
@@ -1268,6 +1344,9 @@ function sideWindowEntrance() {
     ctx.closePath();
     
     
+    
+    
+    
 }
 
 
@@ -1298,7 +1377,7 @@ function sideWindowOne() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = "#f2e8c9";
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5-5);  //bot right
@@ -1307,6 +1386,132 @@ function sideWindowOne() {
     ctx.stroke();
     ctx.fill();
     ctx.closePath();
+    
+    
+    
+       //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+3,yTop-2);//top left
+    ctx.lineTo(xLeft+3,yBot-2.5-2);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+5,yTop-4);//top left
+    ctx.lineTo(xLeft+5,yBot-2.5-4);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+8,yTop-6);//top left
+    ctx.lineTo(xLeft+8,yBot-2.5-6);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+11,yTop-9);//top left
+    ctx.lineTo(xLeft+11,yBot-2.5-9);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+13,yTop-11);//top left
+    ctx.lineTo(xLeft+13,yBot-2.5-11);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+16,yTop-14);//top left
+    ctx.lineTo(xLeft+16,yBot-2.5-14);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+19,yTop-16);//top left
+    ctx.lineTo(xLeft+19,yBot-2.5-16);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+17,yTop-13);//top left
+    ctx.lineTo(xLeft+17,yBot-2.5-13);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+17,yTop-13);//top left
+    ctx.lineTo(xLeft+17,yBot-2.5-13);//top right
+    
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+31-30-1, yTop-8-8+15+8);//top left
+    ctx.lineTo(xRight+38-41-1, yTop-25-10+15+3+8);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+31-30-1, yTop-8-8+15+8+8);//top left
+    ctx.lineTo(xRight+38-41-1, yTop-25-10+15+3+8+8);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+31-30-1, yTop-8-8+15+8+8+8);//top left
+    ctx.lineTo(xRight+38-41-1, yTop-25-10+15+3+8+8+8);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xLeft+31-30-1, yTop-8-8+15+8+8+8+8);//top left
+    ctx.lineTo(xRight+38-41-1, yTop-25-10+15+3+8+8+8+8);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
 
 }
 
@@ -1333,7 +1538,7 @@ function sideWindowTwo() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = "#f2e8c9";
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5+2);  //bot right
@@ -1342,6 +1547,74 @@ function sideWindowTwo() {
     ctx.stroke();
     ctx.fill();
     ctx.closePath();
+    
+    //THE BARS
+    
+    var xbarLeft = xLeft;
+    var xbarRight = xRight;
+    var ybarTop = yTop;
+    var ybarBot = yBot-2.5;
+    
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5, ybarTop-2-3.5);//top left
+    ctx.lineTo(xbarLeft+5,ybarBot-2-3.5);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5-4-1, ybarTop-5+4+10);//top left
+    ctx.lineTo(xbarRight+3-6-1,ybarTop-14-2+6+10);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+      //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5-4-1, ybarTop-5+4+20);//top left
+    ctx.lineTo(xbarRight+3-6-1,ybarTop-14-2+6+20);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+      //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5-4-1, ybarTop-5+4+30);//top left
+    ctx.lineTo(xbarRight+3-6-1,ybarTop-14-2+6+30);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+      //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5-4-1, ybarTop-5+4+40);//top left
+    ctx.lineTo(xbarRight+3-6-1,ybarTop-14-2+6+40);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+      //bars
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(xbarLeft+5-4-1, ybarTop-5+4+50);//top left
+    ctx.lineTo(xbarRight+3-6-1,ybarTop-14-2+6+50);//top right
+
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+ 
+    
 }
 
 //front facing window thing
@@ -1415,9 +1688,12 @@ function mainBuilding(){
     sideBaseRoofRight();
     sideWallRight();
     sideRoofLeft();
+    
     roofThingy();
+    
     frontWall();
     sideRoofRight();
+    
 }
 
 function entranceBuilding(){
@@ -1450,5 +1726,7 @@ function main() {
     sideWindowEntrance();
     sideWindowOne();  
     sideWindowTwo();
-    sideBuildingHole()
+    sideBuildingHole();
+    sideHousePlanks();
+    
 }
