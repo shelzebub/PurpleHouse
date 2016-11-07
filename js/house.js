@@ -501,6 +501,9 @@ function sideHouseRight(){
    
      //SIDEPART (BACK)
     ctx.beginPath();
+     
+
+    //railing floor
     ctx.fillStyle = "#ffddcc";
     ctx.moveTo(290-5+15,245+10+10);//TOP LEFT
     ctx.lineTo(290-5+15,390-8-18-2);//BOT LEFT
@@ -511,6 +514,16 @@ function sideHouseRight(){
     ctx.fill();
     ctx.closePath();
     
+    ctx.beginPath();
+    ctx.fillStyle= "white";
+    ctx.moveTo(280-6,385+3); //BOT LEFT
+    ctx.lineTo(310-6+5,385+3);//botRight
+    ctx.lineTo(327+5+5,365-6); //TOP RIGHT
+    ctx.lineTo(327+5+5,365-6); //TOP RIGHT
+    ctx.lineTo(300+5,365-6); //TOP LEFT
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
     //sidepart (FRONT)
     ctx.beginPath();
     ctx.fillStyle = "#ffddcc";
@@ -586,41 +599,46 @@ function sideHouseRight(){
     //railings
     //bottom plate
 
+  
+    
     ctx.beginPath();
-    ctx.moveTo(327+5+5,365-6); //TOP RIGHT
-    ctx.lineTo(300+5,365-6); //TOP LEFT
-    ctx.lineTo(280-6,385+3); //BOT LEFT
+    
+    ctx.moveTo(280-6,385+3); //BOT LEFT
     ctx.lineTo(310-6+5,385+3);//botRight
     ctx.lineTo(327+5+5,365-6); //TOP RIGHT
+    ctx.lineTo(327+5+5,365-6); //TOP RIGHT
+    ctx.lineTo(300+20,365-6); //TOP LEFT
     ctx.stroke();
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.moveTo(327+5+5,365-2-6); //TOP RIGHT
-    ctx.lineTo(300+5,365-2-6); //TOP LEFT
-    ctx.lineTo(280-6,385-2+3); //BOT LEFT
-    ctx.lineTo(310-6+5,385-2+3);//bot right
-    ctx.lineTo(327+5+5,365-2-6); //TOP RIGHT
+    ctx.moveTo(280-6,385+3+2); //BOT LEFT
+    ctx.lineTo(310-6+5,385+3+2);//botRight
+    ctx.lineTo(327+5+5,365-6+2); //TOP RIGHT
+    ctx.lineTo(327+5+5,365-6+2); //TOP RIGHT
+    ctx.lineTo(300+20,365-6+2); //TOP LEFT
     
     ctx.stroke();
     ctx.closePath();
     
+    //rip rail connector
     ctx.beginPath();
-    ctx.moveTo(327+5+5,365-6-25); //TOP RIGHT
-    ctx.lineTo(300+5,365-6-25); //TOP LEFT
-    ctx.lineTo(280-6,385+3-25); //BOT LEFT
+    ctx.moveTo(280-6,385+3-23); //BOT LEFT
+    ctx.lineTo(310-6+5,385+3-23);//botRight
+    ctx.lineTo(327+5+5,365-6-23); //TOP RIGHT
+    ctx.lineTo(327+5+5,365-6-23); //TOP RIGHT
+    ctx.lineTo(300+20,365-6-23); //TOP LEFT
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(280-6,385+3-25); //BOT LEFT
     ctx.lineTo(310-6+5,385+3-25);//botRight
     ctx.lineTo(327+5+5,365-6-25); //TOP RIGHT
+    ctx.lineTo(327+5+5,365-6-25); //TOP RIGHT
+    ctx.lineTo(300+20,365-6-25); //TOP LEFT
     ctx.stroke();
     ctx.closePath();
-    
-    ctx.beginPath();
-    ctx.moveTo(327+5+5,365-2-6-25); //TOP RIGHT
-    ctx.lineTo(300+5,365-2-6-25); //TOP LEFT
-    ctx.lineTo(280-6,385-2+3-25); //BOT LEFT
-    ctx.lineTo(310-6+5,385-2+3-25);//bot right
-    ctx.lineTo(327+5+5,365-2-6-25); //TOP RIGHT
-
 
     //bars
     var xbarTop = 310-6+5;
@@ -667,13 +685,7 @@ function sideHouseRight(){
     
     ctx.moveTo(xbarTop+13,ybarTop-28); //TOP RIGHT
     ctx.lineTo(xbarBot+13,ybarBot-28); //TOP LEFT
-    
-    ctx.moveTo(xbarTop+5,ybarTop-28); //TOP RIGHT
-    ctx.lineTo(xbarBot+5,ybarBot-28); //TOP LEFT
-    
-    ctx.moveTo(xbarTop-2,ybarTop-28); //TOP RIGHT
-    ctx.lineTo(xbarBot-2,ybarBot-28); //TOP LEFT
-  
+   
     ctx.stroke();
     ctx.closePath();
 
@@ -777,6 +789,147 @@ function chimney(){
     ctx.closePath();
 }
 
+
+//----------------------------------------------------------------------
+
+//front staircase
+function stairsTop() {
+    var xLeft = 160-6-1+2; 
+    var xRight =198-6-1; 
+    var yTop =407+2+7;
+    var yBot =417+2+7;
+    
+    var xLeftStep = 160+4-6-1+2; 
+    var xRightStep =201+1-6-1; 
+    var yTopStep =402+3+1.5+7-1+1;
+    var yBotStep =405+3+1.5+7-1;
+    
+    var c = document.getElementById("myCanvas");
+    var ctx= c.getContext("2d");
+    
+    
+    
+    //top stair top
+    ctx.beginPath;
+    ctx.fillStyle = "#ffb691";
+    ctx.moveTo(xLeftStep,yTopStep);//lefttop
+    ctx.lineTo(xLeft,yTop);//
+    ctx.lineTo(xRight-2,yTop);
+    ctx.lineTo(xRightStep-2,yTopStep);
+    ctx.lineTo(xLeftStep,yTopStep);
+
+    // ctx.stroke();
+    ctx.closePath();
+    
+    
+ 
+   
+    
+    //stair 2 top
+    
+    ctx.moveTo(xLeftStep-4+1,yTopStep+12.5);//lefttop
+    ctx.lineTo(xLeft-4,yTop+12.5);//
+    ctx.lineTo(xRight-4+1-2,yTop+12.5);
+    ctx.lineTo(xRightStep-4-2,yTopStep+12.5);
+    ctx.lineTo(xLeftStep-4+1,yTopStep+12.5);
+    // ctx.stroke();
+    
+
+    
+    //bot stair top
+    ctx.beginPath;
+    ctx.moveTo(xLeftStep-4-4,yTopStep+12.5+12.5);//lefttop
+    ctx.lineTo(xLeft-4-4+1,yTop+12.5+12.5);//
+    ctx.lineTo(xRight-4-4+1-2,yTop+12.5+12.5);
+    ctx.lineTo(xRightStep-4-4-2,yTopStep+12.5+12.5);
+    ctx.lineTo(xLeftStep-4-4,yTopStep+12.5+12.5);
+    ctx.fill();
+    //ctx.stroke();
+    ctx.closePath();
+    
+ 
+    
+}
+
+function stairsFront() {
+    var xLeft = 160-6-1+2; 
+    var xRight =198-6-1; 
+    var yTop =407+2+7;
+    var yBot =417+2+7;
+    
+    var xLeftStep = 160+4-6-1+2; 
+    var xRightStep =201+1-6-1; 
+    var yTopStep =402+3+1.5+7-1+1;
+    var yBotStep =405+3+1.5+7-1;
+    
+    var c = document.getElementById("myCanvas");
+    var ctx= c.getContext("2d");
+    
+    
+    
+    //top stair front
+    ctx.beginPath();
+    ctx.fillStyle = "#ffddcc";
+    ctx.moveTo(xLeft,yTop);
+    ctx.lineTo(xLeft,yBot);
+    ctx.lineTo(xRight-2.5,yBot);
+    ctx.lineTo(xRight-2.5,yTop);
+    ctx.lineTo(xLeft,yTop);
+
+   // ctx.stroke();
+    
+    //stair 2 front
+    ctx.moveTo(xLeft-4,yTop+10+3);
+    ctx.lineTo(xLeft-4,yBot+10+3);
+    ctx.lineTo(xRight-5-1,yBot+10+3);
+    ctx.lineTo(xRight-5-1,yTop+10+3);
+    ctx.lineTo(xLeft-4,yTop+10+3);
+
+    //ctx.stroke();
+   // ctx.closePath();
+    
+    
+    
+    //bot stair front
+    //ctx.beginPath();
+    
+    ctx.moveTo(xLeft-10+2,yTop+20+5);
+    ctx.lineTo(xLeft-10+2,yBot+20+5);
+    ctx.lineTo(xRight-9,yBot+20+5);
+    ctx.lineTo(xRight-9,yTop+20+5);
+    ctx.lineTo(xLeft-10+2,yTop+20+5);
+    ctx.fill();
+    //ctx.stroke();
+    ctx.closePath();
+    
+}
+
+
+function sideOfStairs(){
+    //side of stairs
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = "#ce997e";
+    ctx.moveTo(193,413.5);
+    ctx.lineTo(189-2,415);
+    ctx.lineTo(189-2,426);  
+    ctx.lineTo(185,427);
+    ctx.lineTo(185,438);
+    ctx.lineTo(181,441);
+    ctx.lineTo(181,452);
+    ctx.lineTo(193,438.5);
+    ctx.lineTo(193,413.5);
+   // ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+}
+
+
+
 function mainBuilding(){
     sideWallLeft();
     sideBaseRoofLeft();
@@ -808,6 +961,9 @@ function main() {
     chimney();
     mainBuilding();
     entranceBuilding();
-    
+    sideOfStairs();
     sideHouseRight();
+    stairsTop();
+    stairsFront();
+    
 }
