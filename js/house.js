@@ -923,11 +923,215 @@ function sideOfStairs(){
    // ctx.stroke();
     ctx.fill();
     ctx.closePath();
+}
+
+
+//-------------------------------------------------
+//FRONT DOOR AREA
+
+
+//PILLAR AND RAIN BLOCKER
+function pillar(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+        
+    //pillars
+    
+    var xLeft = 160;
+    var xRight = 163;
+    var yTop = 380-10;
+    var yBot = 414;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.moveTo(xLeft,yTop);//top left
+    ctx.lineTo(xLeft,yBot);//top right
+    ctx.lineTo(xRight,yBot);  //bot right
+    ctx.lineTo(xRight,yTop); //bot left
+    ctx.lineTo(xLeft,yTop); //top left
+    ctx.stroke();
+    //ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.moveTo(xLeft+30,yTop);//top left
+    ctx.lineTo(xLeft+30,yBot);//top right
+    ctx.lineTo(xRight+30,yBot);  //bot right
+    ctx.lineTo(xRight+30,yTop); //bot left
+    ctx.lineTo(xLeft+30,yTop); //top left
+    ctx.stroke();
+    //ctx.fill();
+    ctx.closePath();
     
     
+    //top thingy
+    var xLeftT = 160-5;
+    var xRightT = 190+3;
+    var yTopT = 368;
+    var yBotT = 372;
+    //front
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.moveTo(xLeftT,yTopT);//top left
+    ctx.lineTo(xLeftT,yBotT+1);//top right
+    ctx.lineTo(xRightT,yBotT+1);  //bot right
+    ctx.lineTo(xRightT,yTopT); //bot left
+    ctx.lineTo(xLeftT,yTopT); //top left
+    ctx.stroke();
+    //ctx.fill();
+    ctx.closePath();
+    
+    //top
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.moveTo(xLeftT+3.5,yTopT-4);//top left
+    ctx.lineTo(xLeftT,yBotT-5);//top right
+    ctx.lineTo(xRightT+1,yBotT-5);  //bot right
+    ctx.lineTo(xRightT+3.5,yTopT-4); //bot left
+    ctx.lineTo(xLeftT+3.5,yTopT-4); //top left
+    ctx.stroke();
+    //ctx.fill();
+    ctx.closePath();
+    
+    //side
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.moveTo(xLeftT+39,yTopT-2+1);//top left
+    ctx.lineTo(xLeftT+39,yBotT+1);//top right
+    ctx.lineTo(xRightT+4,yBotT-4+1);  //bot right
+    ctx.lineTo(xRightT+4,yTopT-5+1); //bot left
+    ctx.lineTo(xLeftT+39,yTopT-1+1); //top left
+    ctx.stroke();
+    //ctx.fill();
+    ctx.closePath();
+    
+
     
 }
 
+
+//DOOR
+function door(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var xLeft = 168;
+    var xRight = 185;
+    var yTop = 380;
+    var yBot = 414;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#654a3b";
+    ctx.moveTo(xLeft,yTop);//top left
+    ctx.lineTo(xLeft,yBot);//top right
+    ctx.lineTo(xRight,yBot);  //bot right
+    ctx.lineTo(xRight,yTop); //bot left
+    ctx.lineTo(xLeft,yTop); //top left
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#1d1d1d";
+    ctx.moveTo(xLeft+3,yTop);//top left
+    ctx.lineTo(xLeft+3,yBot-2);//top right
+    ctx.lineTo(xRight,yBot-2);  //bot right
+    ctx.lineTo(xRight,yTop); //bot left
+    ctx.lineTo(xLeft+3,yTop); //top left
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+}
+
+//TOP HOLE THING
+
+function door(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var xLeft = 168;
+    var xRight = 185;
+    var yTop = 380;
+    var yBot = 414;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#654a3b";
+    ctx.moveTo(xLeft,yTop);//top left
+    ctx.lineTo(xLeft,yBot);//top right
+    ctx.lineTo(xRight,yBot);  //bot right
+    ctx.lineTo(xRight,yTop); //bot left
+    ctx.lineTo(xLeft,yTop); //top left
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#1d1d1d";
+    ctx.moveTo(xLeft+3,yTop);//top left
+    ctx.lineTo(xLeft+3,yBot-2);//top right
+    ctx.lineTo(xRight,yBot-2);  //bot right
+    ctx.lineTo(xRight,yTop); //bot left
+    ctx.lineTo(xLeft+3,yTop); //top left
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+}
+
+function frontHole(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var xLeft = 168;
+    var xRight = 185;
+    var yTop = 380-35;
+    var yBot = 414-35-16.5;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#654a3b";
+    ctx.moveTo(xLeft,yTop);//top left
+    ctx.arc(xLeft+7.75,yTop+4, 7.5, 0, 2*Math.PI); /////////////
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#1d1d1d";
+    ctx.moveTo(xLeft,yTop);//top left
+    ctx.arc(xLeft+10,yTop+4,7, 0, 2*Math.PI);
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "#654a3b";
+    ctx.moveTo(xLeft,yTop+3);//top left
+    ctx.lineTo(xLeft,yBot);//top right
+    ctx.lineTo(xRight,yBot);  //bot right
+    ctx.lineTo(xRight,yTop+3); //bot left
+    ctx.lineTo(xLeft,yTop+3); //top left
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#1d1d1d";
+    ctx.moveTo(xLeft+3,yTop+3);//top left
+    ctx.lineTo(xLeft+3,yBot-2);//top right
+    ctx.lineTo(xRight,yBot-2);  //bot right
+    ctx.lineTo(xRight,yTop+3); //bot left
+    ctx.lineTo(xLeft+3,yTop+3); //top left
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+  
+}
+
+//---------------------------------------------------------------
 
 
 function mainBuilding(){
@@ -965,5 +1169,8 @@ function main() {
     sideHouseRight();
     stairsTop();
     stairsFront();
+    pillar();
+    door();
+    frontHole();
     
 }
