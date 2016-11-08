@@ -80,6 +80,29 @@
     var xBotRightEntrance = xBotRight-45;
     var yBotRightEntrance = yBotRight+110;
 
+    //---------------------------------------------------------
+
+    //colors
+    var colourWall = "#ffddcc";
+    var colourWallShade = "#ffc2a3";
+    var colourWallShadeDark = "#ce997e";
+    var colourStairsShade = "#ffb691";
+    var colourRoof = "#fdac84";
+    var colourRoofShade = "#f59c70";
+    var colourRoofShadeDark = "#d37749";
+    var colourPlank = "#4d3122";
+    var colourPlankShade = "#412718"
+    var colourPlankLight = "#6d4834";
+    var brick = "#931313";
+    var chimneyBrick = "#f44747";
+    var colourChimneyTop = "#666666";
+    var colourChimney = "#888888";
+    var colourChimneyShade = "#777777";
+    var colourInnerShade = "#654a3b";
+    var colourWindow = "#d3c0b6";
+    var colourBlackish = "#1d1d1d";
+    var colourSideHouseWindow = "#f2e8c9";
+
 
 
 
@@ -94,7 +117,7 @@ function frontWall() {
     //bottom rectangle
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.beginPath();
     ctx.moveTo(xLeft,yTop);
     ctx.lineTo(xLeft,yBot);
@@ -128,7 +151,7 @@ function backWall(){
     //bottom rectangle
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.beginPath();
     ctx.moveTo(xLeft2,yTop2);
     ctx.lineTo(xLeft2,yBot2);
@@ -154,7 +177,7 @@ function sideBaseRoofRight(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
 
     ctx.moveTo(xRight, yTop);
     ctx.lineTo(xRight2, yTop2);
@@ -174,7 +197,7 @@ function sideRoofRight(){
 
     
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoof;
 
     ctx.moveTo(xMidRoofLeft, yMidRoofLeft); //bottom left
     ctx.lineTo(xBotLeft-3, yBotLeft);
@@ -204,7 +227,7 @@ function sideBaseRoofLeft(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoof;
 
     ctx.moveTo(xLeft, yTop);
     ctx.lineTo(xLeft2, yTop2);
@@ -224,7 +247,7 @@ function sideRoofLeft(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#d37749";
+    ctx.fillStyle = colourRoofShadeDark;
 
     ctx.moveTo(xMidRoofLeft, yMidRoofLeft); //bottom left
     ctx.lineTo(xBotLeft-120, yBotLeft);
@@ -259,7 +282,7 @@ function roofThingy() {
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoof;
 
     ctx.moveTo(xMidRoofLeft, yMidRoofLeft); //bottom left
     ctx.lineTo(xMidRoofLeft, yMidRoofLeft-10); //top left
@@ -277,7 +300,7 @@ function sideWallRight(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#ce997e";
+    ctx.fillStyle = colourWallShadeDark;
 
     ctx.moveTo(xRight, yTop);
     ctx.lineTo(xRight2, yTop2);
@@ -296,7 +319,7 @@ function sideWallLeft(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
 
     ctx.moveTo(xLeft, yTop);
     ctx.lineTo(xLeft2, yTop2);
@@ -319,7 +342,7 @@ function backWallEntrance() {
     //bottom rectangle
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.beginPath();
     ctx.moveTo(xLeftSm-3,yTopSm);
     ctx.lineTo(xLeftSm-3,yBotSm);
@@ -349,7 +372,7 @@ function frontWallEntrance() {
     //bottom rectangle
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.beginPath();
     ctx.moveTo(xLeftSm2+2+3,yTopSm2);
     ctx.lineTo(xLeftSm2+2+3,yBotSm2);
@@ -376,7 +399,7 @@ function sideBaseRoofRightEntrance(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
 
     ctx.moveTo(xRightSm, yTopSm);
     ctx.lineTo(xRightSm2, yTopSm2);
@@ -395,7 +418,7 @@ function sideRoofRightEntrance() {
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoof;
     ctx.moveTo(xMidRoofLeftEntrance, yMidRoofLeftEntrance-10); //bottom left
     ctx.lineTo(xBotLeftEntrance-15-3, yBotLeftEntrance-10-7);
     ctx.lineTo(xBotRightEntrance-15-3, yBotRightEntrance-10-7);
@@ -414,7 +437,7 @@ function sideBaseRoofLeftEntrance(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#d37749";
+    ctx.fillStyle = colourRoofShadeDark;
 
     
     ctx.moveTo(xLeftSm, yTopSm);
@@ -435,7 +458,7 @@ function sideRoofLefttEntrance() {
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#d37749";
+    ctx.fillStyle = colourRoofShadeDark;
 
     ctx.moveTo(xMidRoofLeftEntrance, yMidRoofLeftEntrance-10); //bottom left
     ctx.lineTo(xBotLeftEntrance-125+8, yBotLeftEntrance-20);
@@ -459,7 +482,7 @@ function sideWallRightEntrance(){
     var ctx= c.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillStyle = "#ffc2a3";
+    ctx.fillStyle = colourWallShade;
 
     ctx.moveTo(xRightSm-3, yTopSm);
     ctx.lineTo(xRightSm2-3, yTopSm2);
@@ -504,7 +527,7 @@ function sideHouseRight(){
      
 
     //railing floor
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.moveTo(290-5+15,245+10+10);//TOP LEFT
     ctx.lineTo(290-5+15,390-8-18-2);//BOT LEFT
     ctx.lineTo(315+4,390-8-18-2);//BOT RIGHT
@@ -526,7 +549,7 @@ function sideHouseRight(){
     ctx.closePath();
     //sidepart (FRONT)
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.moveTo(290-5,245+35);//TOP LEFT
     ctx.lineTo(290-5,390-8-5);//BOT LEFT
     ctx.lineTo(315-12,390-8-5);//BOT RIGHT
@@ -539,7 +562,7 @@ function sideHouseRight(){
    
     //roofpart (back)
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoofShadeDark;
 
     ctx.moveTo(320-5,195+10); //TOP RIGHT
     ctx.lineTo(275-28,195+10); //TOP LEFT
@@ -555,7 +578,7 @@ function sideHouseRight(){
     
     //RIGHT SIDE
     ctx.beginPath();
-    ctx.fillStyle = "#ffc2a3";
+    ctx.fillStyle = colourWallShade;
     ctx.moveTo(315-12,245+10+25);//TOP LEFT
     ctx.lineTo(335-16,235+2+27);//TOP RIGHT
     ctx.lineTo(335-16,380-16-3);//BOT RIGHT
@@ -569,7 +592,7 @@ function sideHouseRight(){
     
      //TRIANGLE PART
     ctx.beginPath();
-    ctx.fillStyle = "#ffc2a3";
+    ctx.fillStyle = colourWallShade;
     ctx.moveTo(315-12,245+10+25);//TOP LEFT
     ctx.lineTo(310,215);//TOP RIGHT
     ctx.lineTo(335-16,235+2+27);//BOT RIGHT
@@ -577,32 +600,10 @@ function sideHouseRight(){
     ctx.stroke();
     ctx.closePath();
     
-
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     //roofpart (front)
     ctx.beginPath();
-    ctx.fillStyle = "#fdac84";
+    ctx.fillStyle = colourRoofShade;
 
     ctx.moveTo(320-5,195+10); //TOP RIGHT
     ctx.lineTo(275-28,195+10); //TOP LEFT
@@ -611,7 +612,7 @@ function sideHouseRight(){
     ctx.lineTo(320-5,195+10); //TOP RIGHT
 
     ctx.fill();
-    ctx.stroke();
+//    ctx.stroke();
     ctx.closePath();
     
     
@@ -721,7 +722,7 @@ function sideHousePlanks(){
     //wood planks for triangle part
     
     ctx.beginPath();
-    ctx.fillStyle = "#4d3122"
+    ctx.fillStyle = colourPlank
     
     ctx.moveTo(313,232); //TOP RIGHT
     ctx.lineTo(313,271); //TOP LEFT
@@ -732,7 +733,7 @@ function sideHousePlanks(){
     //ctx.closePath();
     
    // ctx.beginPath();
-    ctx.fillStyle = "#4d3122"
+    ctx.fillStyle = colourPlank
     
     ctx.moveTo(309+1,275-1); //TOP RIGHT
     ctx.lineTo(320-1,265); //TOP LEFT
@@ -783,12 +784,14 @@ function chimney(){
     
     
     //basefront
+    ctx.fillStyle = colourChimney;
     ctx.beginPath();
     ctx.moveTo(xLeft+1-1,yLeft+31);//bottom left
     ctx.lineTo(xLeft+1-1,yRight+31);//top left
     ctx.lineTo(xRight,yRight+31);//top right
     ctx.lineTo(xRight,yRightBot+31);//bottom right
     ctx.lineTo(xLeft+1-1,yLeft+31);
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
@@ -803,16 +806,17 @@ function chimney(){
     
    
     //baseright
+    ctx.fillStyle = colourChimneyShade;
     ctx.beginPath();
     ctx.moveTo(xLeftSide,yTopSide+31); //bottom left
     ctx.lineTo(xLeftSide,yRight+31);//top left
     ctx.lineTo(xRightSide,yBotSide+31);//top right
     ctx.lineTo(xRightSide,yTopSide2+31); //bottom right
-
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
-    ctx.fillStyle = "red";
+    ctx.fillStyle = colourChimneyTop;
     //topfront
     ctx.beginPath();
     ctx.lineTo(235-22+1 - 2,160-30-1+31); //bot left
@@ -820,7 +824,7 @@ function chimney(){
     ctx.lineTo(245-22-4 + 2,155-30-1+31);//top right
     ctx.lineTo(235-22+1 - 2,155-30-1+31);//top left
     ctx.lineTo(235-22+1 - 2,160-30-1+31);
-    //ctx.fill();
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
@@ -831,20 +835,20 @@ function chimney(){
     ctx.lineTo(255-22-1 + 2,155-5-32+31);//bot right
     ctx.lineTo(245-22-3 + 2,160-30+31);//bop left
     ctx.lineTo(245-22-3 + 2,155-30+31);//top LEFT
-
- //   ctx.fill();
+    ctx.fillStyle = colourChimneyTop;
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
     //topabove
-    ctx.fillStyle = "black";
+    ctx.fillStyle = colourChimneyShade;
     ctx.beginPath();
     ctx.lineTo(235-24 ,155-30-2+31);//bot left
     ctx.lineTo(235-24 + 10,150-30-5-2+31);//top left
     ctx.lineTo(255-25+1 + 2,150-30-5-2+31);//top right
     ctx.lineTo(245-25+1 + 2,155-30-2+31);//bot right
     ctx.lineTo(235-24 ,155-30-2+31);//bot left
-    //ctx.fill();
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     
@@ -855,7 +859,7 @@ function chimney(){
     ctx.lineTo(255-25+1 + 2-3,150-30-5-2+31+3);//top right
     ctx.lineTo(245-25+1 + 2,155-30-2+31);//bot right
     ctx.lineTo(235-24 +4,155-30-2+31);//bot left
-    //ctx.fill();
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
 }
@@ -882,7 +886,7 @@ function stairsTop() {
     
     //top stair top
     ctx.beginPath;
-    ctx.fillStyle = "#ffb691";
+    ctx.fillStyle = colourStairsShade;
     ctx.moveTo(xLeftStep,yTopStep);//lefttop
     ctx.lineTo(xLeft,yTop);//
     ctx.lineTo(xRight-2,yTop);
@@ -940,7 +944,7 @@ function stairsFront() {
     
     //top stair front
     ctx.beginPath();
-    ctx.fillStyle = "#ffddcc";
+    ctx.fillStyle = colourWall;
     ctx.moveTo(xLeft,yTop);
     ctx.lineTo(xLeft,yBot);
     ctx.lineTo(xRight-2.5,yBot);
@@ -981,7 +985,7 @@ function sideOfStairs(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.fillStyle = "#ce997e";
+    ctx.fillStyle = colourWallShadeDark;
     ctx.moveTo(193,413.5);
     ctx.lineTo(189-2,415);
     ctx.lineTo(189-2,426);  
@@ -1015,25 +1019,25 @@ function pillar(){
     var yBot = 414;
     
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlank;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot);//top right
     ctx.lineTo(xRight,yBot);  //bot right
     ctx.lineTo(xRight,yTop); //bot left
     ctx.lineTo(xLeft,yTop); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlank;
     ctx.moveTo(xLeft+30,yTop);//top left
     ctx.lineTo(xLeft+30,yBot);//top right
     ctx.lineTo(xRight+30,yBot);  //bot right
     ctx.lineTo(xRight+30,yTop); //bot left
     ctx.lineTo(xLeft+30,yTop); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     
@@ -1044,38 +1048,38 @@ function pillar(){
     var yBotT = 372;
     //front
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlankLight;
     ctx.moveTo(xLeftT,yTopT);//top left
     ctx.lineTo(xLeftT,yBotT+1);//top right
     ctx.lineTo(xRightT,yBotT+1);  //bot right
     ctx.lineTo(xRightT,yTopT); //bot left
     ctx.lineTo(xLeftT,yTopT); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     //top
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlankShade;
     ctx.moveTo(xLeftT+3.5,yTopT-4);//top left
     ctx.lineTo(xLeftT,yBotT-5);//top right
     ctx.lineTo(xRightT+1,yBotT-5);  //bot right
     ctx.lineTo(xRightT+3.5,yTopT-4); //bot left
     ctx.lineTo(xLeftT+3.5,yTopT-4); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     //side
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlankLight;
     ctx.moveTo(xLeftT+39,yTopT-2+1);//top left
     ctx.lineTo(xLeftT+39,yBotT+1);//top right
     ctx.lineTo(xRightT+4,yBotT-4+1);  //bot right
     ctx.lineTo(xRightT+4,yTopT-5+1); //bot left
     ctx.lineTo(xLeftT+39,yTopT-1+1); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
 
@@ -1094,7 +1098,7 @@ function door(){
     var yBot = 414;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-1.5);//top right
     ctx.lineTo(xRight,yBot-1.5);  //bot right
@@ -1105,7 +1109,7 @@ function door(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft+3,yTop);//top left
     ctx.lineTo(xLeft+3,yBot-2.5);//top right
     ctx.lineTo(xRight,yBot-2.5);  //bot right
@@ -1127,7 +1131,7 @@ function frontHole(){
     var yBot = 414-35-16.5;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+7.75,yTop+4, 7.5, 0, 2*Math.PI); /////////////
     //ctx.stroke();
@@ -1135,7 +1139,7 @@ function frontHole(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+10,yTop+4,7, 0, 2*Math.PI);
     //ctx.stroke();
@@ -1143,7 +1147,7 @@ function frontHole(){
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop+3);//top left
     ctx.lineTo(xLeft,yBot+.5);//top right
     ctx.lineTo(xRight,yBot+.5);  //bot right
@@ -1154,7 +1158,7 @@ function frontHole(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft+3,yTop+3);//top left
     ctx.lineTo(xLeft+3,yBot-2+.5);//top right
     ctx.lineTo(xRight,yBot-2+.5);  //bot right
@@ -1180,7 +1184,7 @@ function frontWindow(){
     var yBot = 414-35-16.5-95+8;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+7.75,yTop+4, 7.5, 0, 2*Math.PI); /////////////
     //ctx.stroke();
@@ -1188,7 +1192,7 @@ function frontWindow(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#d3c0b6";
+    ctx.fillStyle = colourWindow;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+10,yTop+4,7, 0, 2*Math.PI);
     //ctx.stroke();
@@ -1196,7 +1200,7 @@ function frontWindow(){
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop+3);//top left
     ctx.lineTo(xLeft,yBot+.5);//top right
     ctx.lineTo(xRight,yBot+.5);  //bot right
@@ -1207,7 +1211,7 @@ function frontWindow(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#d3c0b6";
+    ctx.fillStyle = colourWindow;
     ctx.moveTo(xLeft+3,yTop+3);//top left
     ctx.lineTo(xLeft+3,yBot-2+.5);//top right
     ctx.lineTo(xRight,yBot-2+.5);  //bot right
@@ -1225,7 +1229,7 @@ function frontWindow(){
     var yBot = 414-140.25;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot);//top right
     ctx.lineTo(xRight,yBot);  //bot right
@@ -1242,7 +1246,7 @@ function frontWindow(){
     var yBot2 = 260.75;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft2,yTop2);//top left
     ctx.lineTo(xLeft2,yBot2);//top right
     ctx.lineTo(xRight2,yBot2);  //bot right
@@ -1275,7 +1279,7 @@ function sideWindowEntrance() {
     
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-1.5+1);//top right
     ctx.lineTo(xRight-3,yBot-3-11.5+1);  //bot right
@@ -1286,7 +1290,7 @@ function sideWindowEntrance() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5);  //bot right
@@ -1309,38 +1313,38 @@ function sideWindowEntrance() {
     
     //front
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlankLight;
     ctx.moveTo(xLeftT,yTopT);//top left
     ctx.lineTo(xLeftT,yBotT);//top right
     ctx.lineTo(xRightT,yBotT);  //bot right
     ctx.lineTo(xRightT,yTopT); //bot left
     ctx.lineTo(xLeftT,yTopT); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     //top
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlankShade;
     ctx.moveTo(xLeftT+15,yTopT-14);//top left
     ctx.lineTo(xLeftT+19.5,yBotT-19);//top right
     ctx.lineTo(xRightT+1,yBotT-5);  //bot right
     ctx.lineTo(xRightT-4,yTopT-1); //bot left
     ctx.lineTo(xLeftT+3.5,yTopT-4); //top left
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     //side
     ctx.beginPath();
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = colourPlank;
     ctx.moveTo(xLeftT+19,yTopT-13);//top right
     ctx.lineTo(xLeftT+19,yBotT-13);//bto right
     ctx.lineTo(xRightT,yBotT);  //bot left
     ctx.lineTo(xRightT,yTopT); //top left
     ctx.lineTo(xLeftT+19,yTopT-13); //top right
     ctx.stroke();
-    //ctx.fill();
+    ctx.fill();
     ctx.closePath();
     
     
@@ -1366,7 +1370,7 @@ function sideWindowOne() {
     var yBot = 400+3-45+5;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-1.5+1);//top right
     ctx.lineTo(xRight-3,yBot-3-11.5+1-5);  //bot right
@@ -1377,7 +1381,7 @@ function sideWindowOne() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#f2e8c9";
+    ctx.fillStyle = "colourSideHouseWindow;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5-5);  //bot right
@@ -1527,7 +1531,7 @@ function sideWindowTwo() {
     var yBot = 400+3-82+35;
     
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-1.5+1);//top right
     ctx.lineTo(xRight-3,yBot-3-11.5+1+2);  //bot right
@@ -1538,7 +1542,7 @@ function sideWindowTwo() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#f2e8c9";
+    ctx.fillStyle = "colourSideHouseWindow;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5+2);  //bot right
@@ -1633,7 +1637,7 @@ function sideBuildingHole(){
   
 
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop+3);//top left
     ctx.lineTo(xLeft,yBot+.5);//top right
     ctx.lineTo(xRight,yBot+.5);  //bot right
@@ -1646,7 +1650,7 @@ function sideBuildingHole(){
     
     //brown hole
     ctx.beginPath();
-    ctx.fillStyle = "#654a3b";
+    ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+7.75-2-1,yTop+4-1, 4.5, 0, 2*Math.PI); /////////////
     //ctx.stroke();
@@ -1655,7 +1659,7 @@ function sideBuildingHole(){
     
       //black hole
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft,yTop);//top left
     ctx.arc(xLeft+10-2.75-2,yTop+4,4.25, 0, 2*Math.PI);
     //ctx.stroke();
@@ -1663,7 +1667,7 @@ function sideBuildingHole(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "#1d1d1d";
+    ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft+1.5,yTop+3);//top left
     ctx.lineTo(xLeft+1.5,yBot-2+.5+.5);//top right
     ctx.lineTo(xRight,yBot-2+.5+.5);  //bot right
@@ -1696,9 +1700,7 @@ function mainBuilding(){
     
 }
 
-function entranceBuilding(){
-
-    
+function entranceBuilding(){    
     backWallEntrance();
     sideWallLeftEntrance();
     sideBaseRoofLeftEntrance();
@@ -1707,6 +1709,11 @@ function entranceBuilding(){
     sideRoofLefttEntrance();
     frontWallEntrance();
     sideRoofRightEntrance();
+    
+}
+
+function smoke(){
+    
     
 }
 
