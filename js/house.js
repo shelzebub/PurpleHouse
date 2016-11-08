@@ -1685,6 +1685,368 @@ function sideBuildingHole(){
 
 
 
+
+function chimneyBricks() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var xLeft =182; 
+    var xRight =193;
+    var yTop =323;
+    var yBot =327;
+    
+    
+    //chimney side top
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1,yTop-5-115-3-32-1-3);
+    ctx.lineTo(xLeft+12-1+3+28+1,yBot-5-118-32-3);
+    ctx.lineTo(xRight+12+28-2,yBot-12-3-115-32-3);
+    ctx.lineTo(xRight+12-2+28,yTop-12-2-115-32-1-3);
+    ctx.lineTo(xLeft+12+3+28+1,yTop-5-115-3-32-1-3);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    //chimney side bottom set left
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1,yTop-5-115-3-32-1-3);
+    ctx.lineTo(xLeft+12-1+3+28+1,yBot-5-118-32-3);
+    ctx.lineTo(xRight+12+28-2,yBot-12-3-115-32-3);
+    ctx.lineTo(xRight+12-2+28,yTop-12-2-115-32-1-3);
+    ctx.lineTo(xLeft+12+3+28+1,yTop-5-115-3-32-1-3);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //chimney side bottom set right
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1+2,yTop-5-115-3-32+1-2-1);
+    ctx.lineTo(xLeft+12-1+3+28+1+2,yBot-5-118-32+1-2-1);
+    ctx.lineTo(xRight+12+28-2,yBot-12-3-115-32+1-1);
+    ctx.lineTo(xRight+12-2+28,yTop-12-2-115-32+1-1);
+    ctx.lineTo(xLeft+12+3+28+1+2,yTop-5-115-3-32+1-2-1);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    //chimney side bottom set left
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1+2-5,yTop-5-115-3-32+1-2+5);
+    ctx.lineTo(xLeft+12-1+3+28+1+2-5,yBot-5-118-32+1-2+5);
+    ctx.lineTo(xRight+12+28-2-5,yBot-12-3-115-32+1+5);
+    ctx.lineTo(xRight+12-2+28-5,yTop-12-2-115-32+1+5);
+    ctx.lineTo(xLeft+12+3+28+1+2-5,yTop-5-115-3-32+1-2+5);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    
+    //chimney front top
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1-10,yTop-5-115-3-32-1-3+1);
+    ctx.lineTo(xLeft+12-1+3+28+1-10,yBot-5-118-32-3);
+    ctx.lineTo(xRight+12+28-2-10,yBot-12-3-115-32+4);
+    ctx.lineTo(xRight+12-2+28-10,yTop-12-2-115-32-1+4);
+    ctx.lineTo(xLeft+12+3+28+1-10,yTop-5-115-3-32-1-3+1);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //chimney front bottom
+    ctx.beginPath();
+    ctx.fillStyle="chimneyBrick";
+    ctx.moveTo(xLeft+12-1+3+28+1-10,yTop-5-115-3-32-1-3+1+8+3);
+    ctx.lineTo(xLeft+12-1+3+28+1-10,yBot-5-118-32-3+8-2-1+3);
+    ctx.lineTo(xRight+12+28-2-12,yBot-12-3-115-32+4+8-2-1+3);
+    ctx.lineTo(xRight+12-2+28-12,yTop-12-2-115-32-1+4+8+3);
+    ctx.lineTo(xLeft+12+3+28+1-10,yTop-5-115-3-32-1-3+1+8+3);
+
+    ctx.stroke();
+    ctx.closePath();
+
+    
+}
+
+
+
+function roofBricks() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var xLeft =182; 
+    var xRight =193;
+    var yTop =323;
+    var yBot =327;
+    
+//bigger bricks 
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1,yTop-5);
+    ctx.lineTo(xLeft+12+2,yBot-5);
+    ctx.lineTo(xRight+12+1,yBot-12-5);
+    ctx.lineTo(xRight+12-1,yTop-12-4);
+    ctx.lineTo(xLeft+12,yTop-5);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+1,yTop-5-8);
+    ctx.lineTo(xLeft+12+2+1,yBot-5-8);
+    ctx.lineTo(xRight+12+1+1,yBot-12-5-8);
+    ctx.lineTo(xRight+12-1+1,yTop-12-4-8);
+    ctx.lineTo(xLeft+12+1,yTop-5-8);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //entrance house middle set bottom brick
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+1+11+4+2+2,yTop-5-8+28);
+    ctx.lineTo(xLeft+12+2+1+11+4+2+2,yBot-5-8+28);
+    ctx.lineTo(xRight+12+1+1+11+4+2+2,yBot-12-5-8+28);
+    ctx.lineTo(xRight+12-1+1+11+4+2+2,yTop-12-4-8+28);
+    ctx.lineTo(xLeft+12+1+11+4+2+2,yTop-5-8+28);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    //entrance house bottom set bottom brick
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+26,yTop-5+46);
+    ctx.lineTo(xLeft+12+2+26,yBot-5+46);
+    ctx.lineTo(xRight+12+1+26,yBot-12-5+46);
+    ctx.lineTo(xRight+12-1+26,yTop-12-4+46);
+    ctx.lineTo(xLeft+12+26,yTop-5+46);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //main house middle top brick
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+30+8,yTop-5-75+12);
+    ctx.lineTo(xLeft+12+2+30+8,yBot-5-75+12);
+    ctx.lineTo(xRight+12+1+30+8,yBot-12-5-75+12);
+    ctx.lineTo(xRight+12-1+30+8,yTop-12-4-75+12);
+    ctx.lineTo(xLeft+12+30+8,yTop-5-75+12);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //main house middle bottom brick
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+40+8,yTop-5-80+12);
+    ctx.lineTo(xLeft+12+2+40+8,yBot-5-80+12);
+    ctx.lineTo(xRight+12+1+40+8,yBot-12-5-80+12);
+    ctx.lineTo(xRight+12-1+40+8,yTop-12-4-80+12);
+    ctx.lineTo(xLeft+12+40+8,yTop-5-80+12);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+48,yTop-5-115);
+    ctx.lineTo(xLeft+12+2+48,yBot-5-115);
+    ctx.lineTo(xRight+12+1+48,yBot-12-5-115);
+    ctx.lineTo(xRight+12-1+48,yTop-12-4-115);
+    ctx.lineTo(xLeft+12+48,yTop-5-115);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+40,yTop-5-113);
+    ctx.lineTo(xLeft+12+2+40,yBot-5-113);
+    ctx.lineTo(xRight+12+1+40,yBot-12-5-113);
+    ctx.lineTo(xRight+12-1+40,yTop-12-4-113);
+    ctx.lineTo(xLeft+12+40,yTop-5-113);
+
+    ctx.stroke();
+    ctx.closePath();
+   
+
+ 
+    
+    
+    
+    
+//smaller brick
+      
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+5+15+3-2,yTop-5+2+8+2);
+    ctx.lineTo(xLeft+12+2+5+15+3-2,yBot-5+2+8+2);
+    ctx.lineTo(xRight+12+5+15+3-2,yBot-12-3+2+8+2);
+    ctx.lineTo(xRight+12-2+5+15+3-2,yTop-12-2+2+8+2);
+    ctx.lineTo(xLeft+12+5+15+3-2,yTop-5+2+8+2);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+       
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+5+8-2,yTop-5+20+2);
+    ctx.lineTo(xLeft+12+2+5+8-2,yBot-5+20+2);
+    ctx.lineTo(xRight+12+5+8-2,yBot-12-3+20+2);
+    ctx.lineTo(xRight+12-2+5+8-2,yTop-12-2+20+2);
+    ctx.lineTo(xLeft+12+5+8-2,yTop-5+20+2);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+27,yTop-5+38);
+    ctx.lineTo(xLeft+12+2+27,yBot-5+38);
+    ctx.lineTo(xRight+12+27,yBot-12-3+38);
+    ctx.lineTo(xRight+12-2+27,yTop-12-2+38);
+    ctx.lineTo(xLeft+12+27,yTop-5+38);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+50+6,yTop-5-18);
+    ctx.lineTo(xLeft+12+2+50+6,yBot-5-18);
+    ctx.lineTo(xRight+12+50+6,yBot-12-3-18);
+    ctx.lineTo(xRight+12-2+50+6,yTop-12-2-18);
+    ctx.lineTo(xLeft+12+50+6,yTop-5-18);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+38,yTop-5-104);
+    ctx.lineTo(xLeft+12+2+38,yBot-5-104);
+    ctx.lineTo(xRight+12+38,yBot-12-3-104);
+    ctx.lineTo(xRight+12-2+38,yTop-12-2-104);
+    ctx.lineTo(xLeft+12+38,yTop-5-104);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    //even smaller brick LOL
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+12-1+38+30+3,yTop-5-115-3);
+    ctx.lineTo(xLeft+12+2+38+30+3,yBot-5-118);
+    ctx.lineTo(xRight+12+38+30,yBot-12-3-115);
+    ctx.lineTo(xRight+12-2+38+30,yTop-12-2-115);
+    ctx.lineTo(xLeft+12+38+30+3,yTop-5-115-3);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    
+    
+    
+    
+    //sidehouse bottom brick
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+100-5-2,yTop-55);
+    ctx.lineTo(xLeft+100-5,yBot-55);
+    ctx.lineTo(xRight+100-5,yBot-55);
+    ctx.lineTo(xRight+100-5,yTop-55);
+    ctx.lineTo(xLeft+100-5-2,yTop-55);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //sidehouse middle set bottom
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+100+5,yTop-55-18);
+    ctx.lineTo(xLeft+100+5,yBot-55-18);
+    ctx.lineTo(xRight+100+5+3,yBot-55-18);
+    ctx.lineTo(xRight+100+5+3,yTop-55-18);
+    ctx.lineTo(xLeft+100+5,yTop-55-18);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    //sidehouse middle set top
+    ctx.beginPath();
+    ctx.fillStyle="brick";
+    ctx.moveTo(xLeft+100+5+6,yTop-55-18-4.5);
+    ctx.lineTo(xLeft+100+5+6,yBot-55-18-4.5);
+    ctx.lineTo(xRight+100+5+3+6,yBot-55-18-4.5);
+    ctx.lineTo(xRight+100+5+3+6,yTop-55-18-4.5);
+    ctx.lineTo(xLeft+100+5+6,yTop-55-18-4.5);
+
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    
+    //sidehouse top set bottom left
+    ctx.beginPath();
+    ctx.fillStyle="brown";
+    ctx.moveTo(xLeft+100+5+6-3-29,yTop-55-18-33);
+    ctx.lineTo(xLeft+100+5+6-3-29,yBot-55-18-33);
+    ctx.lineTo(xRight+100+5+3+6-29,yBot-55-18-33);
+    ctx.lineTo(xRight+100+5+3+6-29,yTop-55-18-33);
+    ctx.lineTo(xLeft+100+5+6-3-29,yTop-55-18-33);
+    ctx.fill()
+    ctx.stroke();
+    ctx.closePath();
+    
+    //sidehouse top set bottom right
+    ctx.beginPath();
+    ctx.fillStyle="brown";
+    ctx.moveTo(xLeft+100+5+6-3-12,yTop-55-18-33);
+    ctx.lineTo(xLeft+100+5+6-3-12,yBot-55-18-33);
+    ctx.lineTo(xRight+100+5+3+6-12,yBot-55-18-33);
+    ctx.lineTo(xRight+100+5+3+6-12,yTop-55-18-33);
+    ctx.lineTo(xLeft+100+5+6-3-12,yTop-55-18-33);
+    ctx.fill()
+    ctx.stroke();
+    ctx.closePath();
+    
+    //sidehouse top set top
+    ctx.beginPath();
+    ctx.fillStyle="brown";
+    ctx.moveTo(xLeft+100+5+6-3-22,yTop-55-18-33-4);
+    ctx.lineTo(xLeft+100+5+6-3-22,yBot-55-18-33-4);
+    ctx.lineTo(xRight+100+5+3+6-22,yBot-55-18-33-4);
+    ctx.lineTo(xRight+100+5+3+6-22,yTop-55-18-33-4);
+    ctx.lineTo(xLeft+100+5+6-3-22,yTop-55-18-33-4);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    
+    
+    
+    
+}
+
+
+
+
+
 function mainBuilding(){
     sideWallLeft();
     sideBaseRoofLeft();
@@ -1732,5 +2094,7 @@ function main() {
     sideWindowTwo();
     sideBuildingHole();
     sideHousePlanks();
+    roofBricks();
+    chimneyBricks()
     
 }
