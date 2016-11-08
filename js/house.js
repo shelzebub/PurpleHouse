@@ -1381,7 +1381,7 @@ function sideWindowOne() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "colourSideHouseWindow;
+    ctx.fillStyle = "#f2e8c9";
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5-5);  //bot right
@@ -1542,7 +1542,7 @@ function sideWindowTwo() {
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.fillStyle = "colourSideHouseWindow;
+    ctx.fillStyle = "#f2e8c9";
     ctx.moveTo(xLeft,yTop);//top left
     ctx.lineTo(xLeft,yBot-2.5);//top right
     ctx.lineTo(xRight-4.5,yBot-3-11.5+2);  //bot right
@@ -1700,7 +1700,9 @@ function mainBuilding(){
     
 }
 
-function entranceBuilding(){    
+function entranceBuilding(){
+
+    
     backWallEntrance();
     sideWallLeftEntrance();
     sideBaseRoofLeftEntrance();
@@ -1709,11 +1711,6 @@ function entranceBuilding(){
     sideRoofLefttEntrance();
     frontWallEntrance();
     sideRoofRightEntrance();
-    
-}
-
-function smoke(){
-    
     
 }
 
