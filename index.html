@@ -6,13 +6,19 @@
     <title>Lin, Shely - Wan, Michelle</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <script type="text/javascript" src="js/house.js">
-    
     </script>
 </head>
 
 <body onLoad="main()">
     <!--placeholder border. remove later. -->
     <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+    <!--    <input type="range" onchange="toggleSpeed()" id="toggleSpeed" value="50" />-->
+    <!--    <p id="demo"></p>-->
+    <div>
+        <label for="speed">Faster</label>
+        <input type="range" min="100" max="200" name="speed" id="speed" value="150" onchange="toggleSpeed(this);" />
+        <label for="speed">Slower</label>
+    </div>
 </body>
 
 </html>

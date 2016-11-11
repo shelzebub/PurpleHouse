@@ -102,9 +102,15 @@
     var colourWindow = "#d3c0b6";
     var colourBlackish = "#1d1d1d";
     var colourSideHouseWindow = "#f2e8c9";
+    var colourSmoke = "#AAAAAA";
 
 
-
+    //animation counter variables
+    var counter = 0;
+    var interval = 150;
+    var animation = setInterval(function () {
+        animateSmoke()
+    }, interval);
 
 
 
@@ -2044,8 +2050,795 @@ function roofBricks() {
 }
 
 
+function smoke1(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(235,120,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,130,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+}
 
+function smoke2(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,110,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,125,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,125,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+}
 
+function smoke3(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,90,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,95,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud2
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,115,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,120,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,115,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+}
+
+function smoke4(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(270,70,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,75,6,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,115,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(255,100,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,115,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke5(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(280,55,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,50,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,65,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(270,105,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,90,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(255,110,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke6(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,50,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(300,39,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,55,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(305,55,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(280,105,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,90,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,90,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,105,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,90,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke7(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(310,40,20,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(300,20,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,45,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(320,25,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,45,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(285,95,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,85,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(280,80,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(270,100,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,85,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud3
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(235,120,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,130,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke8(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(325,25,20,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(315,10,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(305,30,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(345,20,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,5,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,40,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(285,95,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,85,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,65,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,75,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,85,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud3
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,110,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,125,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,125,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke9(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1 going off screen
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(345,15,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(320,0,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(325,15,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(355,5,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,55,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(305,65,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(315,45,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(285,55,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,40,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloudsnew
+    
+    //cloud3
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,90,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,95,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud4
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,115,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(230,120,5,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(240,115,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke10(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1 going off screen
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(370,0,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,0,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(355,3,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(305,25,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(310,30,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(325,40,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(310,45,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,35,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloudsnew
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(270,70,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,75,6,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,115,11,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(255,100,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(250,115,7,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+}
+
+function smoke11(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud1  off screen
+//    ctx.beginPath();
+//    ctx.fillStyle = colourSmoke;
+//    ctx.arc(370,0,12,0, 2*Math.PI);
+//    ctx.fill();
+//    ctx.closePath();
+//    
+//    ctx.beginPath();
+//    ctx.fillStyle = colourSmoke;
+//    ctx.arc(330,0,15,0, 2*Math.PI);
+//    ctx.fill();
+//    ctx.closePath();
+//    
+//    ctx.beginPath();
+//    ctx.fillStyle = colourSmoke;
+//    ctx.arc(355,3,14,0, 2*Math.PI);
+//    ctx.fill();
+//    ctx.closePath();
+    
+    //cloud2 going off screen
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(320,10,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(310,15,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(335,0,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(325,22,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(300,5,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloudsnew
+    
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(280,55,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(295,50,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,65,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(270,105,12,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,90,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(255,110,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+}
+
+function smoke12(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    //cloud2 going off screen
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,0,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(350,0,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(330,-5,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(309,-2,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    //cloudsnew
+    //cloud1
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,50,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(300,39,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,55,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(305,55,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //cloud2
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(280,105,10,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(290,90,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(275,90,13,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(265,105,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colourSmoke;
+    ctx.arc(260,90,8,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    
+}
 
 function mainBuilding(){
     sideWallLeft();
@@ -2076,8 +2869,60 @@ function entranceBuilding(){
     
 }
 
-function main() {
-    //Run main program here.
+function animateSmoke(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    ctx.clearRect(0,0, c.width, c.height);
+    counter++;
+    if (counter == 13){
+        counter = 7;
+    }
+    drawHouse();
+    switch(counter){
+        case 1:
+            smoke1();
+            break;
+        case 2:
+            smoke2();
+            break;
+        case 3:
+            smoke3();
+            break;
+        case 4:
+            smoke4();
+            break;
+        case 5:
+            smoke5();
+            break;
+        case 6:
+            smoke6();
+            break;
+        case 7:
+            smoke7();
+            break;
+        case 8:
+            smoke8();
+            break;
+        case 9:
+            smoke9();
+            break;
+        case 10:
+            smoke10();
+            break;
+        case 11:
+            smoke11();
+            break;
+        case 12:
+            smoke12();
+            break;
+        
+            
+
+    }
+    
+}
+
+function drawHouse(){
     chimney();
     mainBuilding();
     entranceBuilding();
@@ -2095,6 +2940,21 @@ function main() {
     sideBuildingHole();
     sideHousePlanks();
     roofBricks();
-    chimneyBricks()
+    chimneyBricks();
+    
+}
+
+function toggleSpeed(rng){
+    clearInterval(animation);
+    animation = setInterval(function () {
+        animateSmoke()
+    }, rng.value);
+}
+
+
+function main() {
+    //Run main program here.
+    drawHouse();
+    animation
     
 }
