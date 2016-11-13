@@ -57,7 +57,6 @@
     //---------------------------------------------------------
 
 
-
    //roof
     var xMidRoofLeft = ((xRight - xLeft) / 2)+ xLeft -7;
     var yMidRoofLeft = yTop + tip -10;
@@ -102,7 +101,25 @@
     var colourWindow = "#d3c0b6";
     var colourBlackish = "#1d1d1d";
     var colourSideHouseWindow = "#f2e8c9";
-    var colourSmoke = "#AAAAAA";
+    var colourSmoke = "#969696";
+    var colorCloud = "#FFF5EE";
+    var colorGround = "#6E8B3D";   
+    var colorPath = "rgba(224, 116, 116, 0.53)";
+    
+    //tree    
+    var colorStump = "#453424";
+    var colorLeaves = "rgb(39, 101, 39)";
+    var colorLeaves2 = "rgba(27, 60, 27, 0.43)";
+    var colorLeaves3 = "rgba(31, 90, 31, 0.88)"
+    //grass
+    var colorGrass = "black";
+   
+    
+
+
+
+
+
 
 
     //animation counter variables
@@ -112,9 +129,6 @@
         animateSmoke()
     }, interval);
 
-
-
-    
 
 function frontWall() {
     var c = document.getElementById("myCanvas");
@@ -160,7 +174,7 @@ function backWall(){
     ctx.fillStyle = colourWall;
     ctx.beginPath();
     ctx.moveTo(xLeft2,yTop2);
-    ctx.lineTo(xLeft2,yBot2);
+    ctx.lineTo(xLeft,yBot2);
     ctx.lineTo(xRight2,yBot2);
     ctx.lineTo(xRight2,yTop2);
     ctx.fill();
@@ -2050,12 +2064,295 @@ function roofBricks() {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
+    
 
 
 
 
 }
 
+
+
+function cloud1() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120-30-30,120+5-80,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128-30-30,120-5-80,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130-30-30,120+7-80,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135-30+10-30,120+5-80,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120-80,120+5-75,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128-80,120-5-75,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130-80,120+7-75,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10-80,120+5-75,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5-80,120-2-75,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+ 
+    
+}
+
+function cloud2() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120-40,120+5-65,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128-40,120-5-65,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130-40,120+7-65,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10-40,120+5-65,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5-40-15,120-2-65-10,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+ 
+    
+}
+
+function cloud3() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120+260-40,120+5-60,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128+260-40,120-5-60,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130+260-40,120+7-60,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10+260-40,120+5-60,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5+260-40,120-2-60,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+ 
+    
+}
+
+function cloud4() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120+270-40,120+5-55,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128+270-40,120-5-55,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130+270-40,120+7-55,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10+270-40,120+5-55,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5+270-40,120-2-55,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+ 
+    
+}
+
+function cloud5() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120+85-20,120+5-65-10,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128+85-20,120-5-65-10,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130+85-20,120+7-65-10,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10+85-20,120+5-65-10,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5+85-20,120-2-65-10,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+ 
+    
+}
+
+function cloud6() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+   
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(120+350,120-85,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(128+350,120-85,18,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(130+350,120-85,14,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(135+10+350,120-85,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorCloud;
+    ctx.arc(150+5+350,120-85,15,0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+ 
+    
+}
+
+//------------------------------------------
+//Smoke
 
 function smoke1(){
     var c = document.getElementById("myCanvas");
@@ -2843,9 +3140,1192 @@ function smoke12(){
     ctx.closePath();
     
     
+}
+
+//----------------------
+//ground color
+
+function ground() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGround;
+    ctx.arc(250,1480,1200, 0, Math.PI, true);
+    ctx.fill();
+    ctx.closePath();
+    
+}
+
+//path
+function path() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+
+    ctx.beginPath();
+    ctx.fillStyle = colorPath;
+    ctx.moveTo(148,450);
+    ctx.lineTo(100,501);
+    ctx.lineTo(160,501);
+    ctx.lineTo(182,450);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+}
+
+
+function tree(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+
+    var x = 280;
+    var y = 150;
+    
+    //leaves part back
+    ctx.beginPath();
+    ctx.fillStyle = colorLeaves;
+    ctx.moveTo(92+x,125+y)
+    ctx.lineTo(87+x,125+y)
+    ctx.lineTo(84+x,122+y)
+    ctx.lineTo(80+x,123+y)
+    ctx.lineTo(78+x,120+y)
+    ctx.lineTo(71+x,119+y)
+    ctx.lineTo(67+x,119+y)
+    ctx.lineTo(64+x,119+y)
+    ctx.lineTo(59+x,114+y)
+    ctx.lineTo(56+x,113+y)
+    ctx.lineTo(51+x,115+y)
+    ctx.lineTo(46+x,116+y)
+    ctx.lineTo(42+x,115+y)
+    ctx.lineTo(39+x,113+y)
+    ctx.lineTo(37+x,109+y)
+    ctx.lineTo(31+x,106+y)
+    ctx.lineTo(28+x,106+y)
+    ctx.lineTo(25+x,103+y)
+    ctx.lineTo(23+x,99+y)
+    ctx.lineTo(18+x,99+y)
+    ctx.lineTo(13+x,96+y)
+    ctx.lineTo(16+x,90+y)
+    ctx.lineTo(13+x,86+y)
+    ctx.lineTo(8+x,84+y)
+    ctx.lineTo(7+x,80+y)
+    ctx.lineTo(3+x,75+y)
+    ctx.lineTo(1+x,70+y)
+    ctx.lineTo(5+x,64+y)
+    ctx.lineTo(8+x,61+y)
+    ctx.lineTo(7+x,54+y)
+    ctx.lineTo(14+x,53+y)
+    ctx.lineTo(10+x,47+y)
+    ctx.lineTo(15+x,42+y)
+    ctx.lineTo(17+x,36+y)
+    ctx.lineTo(19+x,32+y)
+    ctx.lineTo(22+x,32+y)
+    ctx.lineTo(22+x,25+y)
+    ctx.lineTo(30+x,23+y)
+    ctx.lineTo(35+x,24+y)
+    ctx.lineTo(37+x,27+y)
+    ctx.lineTo(42+x,29+y)
+    ctx.lineTo(44+x,27+y)
+    ctx.lineTo(52+x,27+y)
+    ctx.lineTo(57+x,30+y)
+    ctx.lineTo(55+x,22+y)
+    ctx.lineTo(56+x,17+y)
+    ctx.lineTo(60+x,16+y)
+    ctx.lineTo(61+x,13+y)
+    ctx.lineTo(65+x,9+y)
+    ctx.lineTo(69+x,8+y)
+    ctx.lineTo(73+x,9+y)
+    ctx.lineTo(77+x,7+y)
+    ctx.lineTo(81+x,10+y)
+    ctx.lineTo(84+x,6+y)
+    ctx.lineTo(89+x,3+y)
+    ctx.lineTo(96+x,2+y)
+    ctx.lineTo(100+x,3+y)
+    ctx.lineTo(105+x,6+y)
+    ctx.lineTo(106+x,10+y)
+    ctx.lineTo(112+x,13+y)
+    ctx.lineTo(113+x,8+y)
+    ctx.lineTo(117+x,10+y)
+    ctx.lineTo(121+x,13+y)
+    ctx.lineTo(127+x,15+y)
+    ctx.lineTo(133+x,15+y)
+    ctx.lineTo(138+x,14+y)
+    ctx.lineTo(144+x,16+y)
+    ctx.lineTo(149+x,17+y)
+    ctx.lineTo(149+x,22+y)
+    ctx.lineTo(146+x,25+y)
+    ctx.lineTo(154+x,24+y)
+    ctx.lineTo(159+x,25+y)
+    ctx.lineTo(164+x,28+y)
+    ctx.lineTo(166+x,32+y)
+    ctx.lineTo(166+x,36+y)
+    ctx.lineTo(164+x,40+y)
+    ctx.lineTo(161+x,45+y)
+    ctx.lineTo(168+x,45+y)
+    ctx.lineTo(172+x,48+y)
+    ctx.lineTo(171+x,52+y)
+    ctx.lineTo(178+x,54+y)
+    ctx.lineTo(178+x,58+y)
+    ctx.lineTo(174+x,61+y)
+    ctx.lineTo(177+x,68+y)
+    ctx.lineTo(175+x,69+y)
+    ctx.lineTo(178+x,75+y)
+    ctx.lineTo(177+x,79+y)
+    ctx.lineTo(183+x,83+y)
+    ctx.lineTo(184+x,90+y)
+    ctx.lineTo(184+x,97+y)
+    ctx.lineTo(181+x,101+y)
+    ctx.lineTo(176+x,104+y)
+    ctx.lineTo(171+x,104+y)
+    ctx.lineTo(168+x,103+y)
+    ctx.lineTo(162+x,105+y)
+    ctx.lineTo(160+x,106+y)
+    ctx.lineTo(159+x,110+y)
+    ctx.lineTo(155+x,115+y)
+    ctx.lineTo(150+x,117+y)
+    ctx.lineTo(147+x,117+y)
+    ctx.lineTo(142+x,114+y)
+    ctx.lineTo(140+x,117+y)
+    ctx.lineTo(136+x,119+y)
+    ctx.lineTo(131+x,116+y)
+    ctx.lineTo(128+x,115+y)
+    ctx.lineTo(124+x,118+y)
+    ctx.lineTo(118+x,118+y)
+    ctx.lineTo(116+x,119+y)
+    ctx.lineTo(111+x,124+y)
+    ctx.lineTo(106+x,125+y)
+    ctx.lineTo(102+x,127+y)
+    ctx.lineTo(97+x,126+y);
+
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    
+    
+    
+    
+    
+    //trump and sump part
+    ctx.beginPath();
+    ctx.fillStyle = colorStump;
+    ctx.moveTo(130+x,187+y)
+    ctx.lineTo(124+x,188+y)
+    ctx.lineTo(128+x,193+y)
+    ctx.lineTo(122+x,191+y)
+    ctx.lineTo(118+x,190+y)
+    ctx.lineTo(117+x,192+y)
+    ctx.lineTo(113+x,189+y)
+    ctx.lineTo(109+x,187+y)
+    ctx.lineTo(112+x,191+y)
+    ctx.lineTo(115+x,195+y)
+    ctx.lineTo(109+x,194+y)
+    ctx.lineTo(106+x,192+y)
+    ctx.lineTo(102+x,194+y)
+    ctx.lineTo(98+x,191+y)
+    ctx.lineTo(92+x,194+y)
+    ctx.lineTo(88+x,195+y)
+    ctx.lineTo(85+x,192+y)
+    ctx.lineTo(81+x,195+y)
+    ctx.lineTo(74+x,195+y)
+    ctx.lineTo(69+x,195+y)
+    ctx.lineTo(74+x,192+y)
+    ctx.lineTo(68+x,193+y)
+    ctx.lineTo(62+x,192+y)
+    ctx.lineTo(65+x,189+y)
+    ctx.lineTo(71+x,186+y)
+    ctx.lineTo(74+x,183+y)
+    ctx.lineTo(78+x,179+y)
+    ctx.lineTo(81+x,173+y)
+    ctx.lineTo(83+x,166+y)
+    ctx.lineTo(87+x,159+y)
+    ctx.lineTo(85+x,153+y)
+    ctx.lineTo(85+x,147+y)
+    ctx.lineTo(85+x,142+y)
+    ctx.lineTo(83+x,139+y)
+    ctx.lineTo(78+x,137+y)
+    ctx.lineTo(75+x,134+y)
+    ctx.lineTo(73+x,126+y)
+    ctx.lineTo(70+x,120+y)
+    ctx.lineTo(68+x,117+y)
+    ctx.lineTo(64+x,112+y)
+    ctx.lineTo(58+x,108+y)
+    ctx.lineTo(56+x,102+y)
+    ctx.lineTo(53+x,98+y)
+    ctx.lineTo(51+x,95+y)
+    ctx.lineTo(56+x,93+y)
+    ctx.lineTo(58+x,95+y)
+    ctx.lineTo(61+x,99+y)
+    ctx.lineTo(64+x,103+y)
+    ctx.lineTo(67+x,107+y)
+    ctx.lineTo(71+x,110+y)
+    ctx.lineTo(74+x,107+y)
+    ctx.lineTo(76+x,100+y)
+    ctx.lineTo(76+x,96+y)
+    ctx.lineTo(81+x,96+y)
+    ctx.lineTo(80+x,103+y)
+    ctx.lineTo(80+x,109+y)
+    ctx.lineTo(81+x,117+y)
+    ctx.lineTo(81+x,124+y)
+    ctx.lineTo(85+x,126+y)
+    ctx.lineTo(87+x,123+y)
+    ctx.lineTo(87+x,115+y)
+    ctx.lineTo(87+x,108+y)
+    ctx.lineTo(86+x,103+y)
+    ctx.lineTo(85+x,99+y)
+    ctx.lineTo(84+x,93+y)
+    ctx.lineTo(86+x,89+y)
+    ctx.lineTo(90+x,92+y)
+    ctx.lineTo(91+x,99+y)
+    ctx.lineTo(93+x,95+y)
+    ctx.lineTo(95+x,90+y)
+    ctx.lineTo(98+x,90+y)
+    ctx.lineTo(98+x,95+y)
+    ctx.lineTo(96+x,101+y)
+    ctx.lineTo(97+x,108+y)
+    ctx.lineTo(96+x,115+y)
+    ctx.lineTo(97+x,120+y)
+    ctx.lineTo(101+x,116+y)
+    ctx.lineTo(105+x,112+y)
+    ctx.lineTo(110+x,109+y)
+    ctx.lineTo(113+x,107+y)
+    ctx.lineTo(113+x,103+y)
+    ctx.lineTo(111+x,96+y)
+    ctx.lineTo(119+x,100+y)
+    ctx.lineTo(118+x,92+y)
+    ctx.lineTo(124+x,94+y)
+    ctx.lineTo(123+x,98+y)
+    ctx.lineTo(121+x,105+y)
+    ctx.lineTo(118+x,109+y)
+    ctx.lineTo(126+x,105+y)
+    ctx.lineTo(131+x,99+y)
+    ctx.lineTo(134+x,94+y)
+    ctx.lineTo(137+x,89+y)
+    ctx.lineTo(140+x,94+y)
+    ctx.lineTo(137+x,102+y)
+    ctx.lineTo(133+x,108+y)
+    ctx.lineTo(126+x,112+y)
+    ctx.lineTo(121+x,116+y)
+    ctx.lineTo(115+x,120+y)
+    ctx.lineTo(110+x,125+y)
+    ctx.lineTo(109+x,132+y)
+    ctx.lineTo(108+x,138+y)
+    ctx.lineTo(108+x,146+y)
+    ctx.lineTo(109+x,155+y)
+    ctx.lineTo(109+x,161+y)
+    ctx.lineTo(111+x,168+y)
+    ctx.lineTo(116+x,174+y)
+    ctx.lineTo(117+x,179+y)
+    ctx.lineTo(121+x,182+y)
+    ctx.lineTo(130+x,185+y)
+    ctx.moveTo(130+x,187+y)
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //stump shadow
+    var x2 = 0;
+    ctx.beginPath();
+    ctx.fillStyle = colorStump;
+    ctx.moveTo(130+x+x2,187+y)
+    ctx.lineTo(124+x+x2,188+y)
+    ctx.lineTo(128+x+x2,193+y)
+    ctx.lineTo(122+x+x2,191+y)
+    ctx.lineTo(118+x+x2,190+y)
+    ctx.lineTo(117+x+x2,192+y)
+    ctx.lineTo(113+x+x2,189+y)
+    ctx.lineTo(109+x+x2,187+y)
+    ctx.lineTo(112+x+x2,191+y)
+    ctx.lineTo(115+x+x2,195+y)
+    ctx.lineTo(109+x+x2,194+y)
+    ctx.lineTo(106+x+x2,192+y)
+    ctx.lineTo(102+x+x2,194+y)
+    ctx.lineTo(98+x+x2,191+y)
+    ctx.lineTo(92+x+x2,194+y)
+    ctx.lineTo(88+x+x2,195+y)
+    ctx.lineTo(85+x+x2,192+y)
+    ctx.lineTo(81+x+x2,195+y)
+    ctx.lineTo(74+x+x2,195+y)
+    ctx.lineTo(69+x+x2,195+y)
+    ctx.lineTo(74+x+x2,192+y)
+    ctx.lineTo(68+x+x2,193+y)
+    ctx.lineTo(62+x+x2,192+y)
+    ctx.lineTo(65+x+x2,189+y)
+    ctx.lineTo(71+x+x2,186+y)
+    ctx.lineTo(74+x+x2,183+y)
+    ctx.lineTo(78+x+x2,179+y)
+    ctx.lineTo(81+x+x2,173+y)
+    ctx.lineTo(83+x+x2,166+y)
+    ctx.lineTo(87+x+x2,159+y)
+    ctx.lineTo(85+x+x2,153+y)
+    ctx.lineTo(85+x+x2,147+y)
+    ctx.lineTo(85+x+x2,142+y)
+    ctx.lineTo(83+x+x2,139+y)
+    ctx.lineTo(78+x+x2,137+y)
+    ctx.lineTo(75+x+x2,134+y)
+    ctx.lineTo(73+x+x2,126+y)
+    ctx.lineTo(70+x+x2,120+y)
+    ctx.lineTo(68+x+x2,117+y)
+    ctx.lineTo(64+x+x2,112+y)
+    ctx.lineTo(58+x+x2,108+y)
+    ctx.lineTo(56+x+x2,102+y)
+    ctx.lineTo(53+x+x2,98+y)
+    ctx.lineTo(51+x+x2,95+y)
+    ctx.lineTo(56+x+x2,93+y)
+    ctx.lineTo(58+x+x2,95+y)
+    ctx.lineTo(61+x+x2,99+y)
+    ctx.lineTo(64+x+x2,103+y)
+    ctx.lineTo(67+x+x2,107+y)
+    ctx.lineTo(71+x+x2,110+y)
+    ctx.lineTo(74+x+x2,107+y)
+    ctx.lineTo(76+x+x2,100+y)
+    ctx.lineTo(76+x+x2,96+y)
+    ctx.lineTo(81+x+x2,96+y)
+    ctx.lineTo(80+x+x2,103+y)
+    ctx.lineTo(80+x+x2,109+y)
+    ctx.lineTo(81+x+x2,117+y)
+    ctx.lineTo(81+x+x2,124+y)
+    ctx.lineTo(85+x+x2,126+y)
+    ctx.lineTo(87+x+x2,123+y)
+    ctx.lineTo(87+x+x2,115+y)
+    ctx.lineTo(87+x+x2,108+y)
+    ctx.lineTo(86+x+x2,103+y)
+    ctx.lineTo(85+x+x2,99+y)
+    ctx.lineTo(84+x+x2,93+y)
+    ctx.lineTo(86+x+x2,89+y)
+    ctx.lineTo(90+x+x2,92+y)
+    ctx.lineTo(91+x+x2,99+y)
+    ctx.lineTo(93+x+x2,95+y)
+    ctx.lineTo(95+x+x2,90+y)
+    ctx.lineTo(98+x+x2,90+y)
+    ctx.lineTo(98+x+x2,95+y)
+    ctx.lineTo(96+x+x2,101+y)
+    ctx.lineTo(97+x+x2,108+y)
+    ctx.lineTo(96+x+x2,115+y)
+    ctx.lineTo(97+x+x2,120+y)
+    ctx.lineTo(101+x+x2,116+y)
+    ctx.lineTo(105+x+x2,112+y)
+    ctx.lineTo(110+x+x2,109+y)
+    ctx.lineTo(113+x+x2,107+y)
+    ctx.lineTo(113+x+x2,103+y)
+    ctx.lineTo(111+x+x2,96+y)
+    ctx.lineTo(119+x+x2,100+y)
+    ctx.lineTo(118+x+x2,92+y)
+    ctx.lineTo(124+x+x2,94+y)
+    ctx.lineTo(123+x+x2,98+y)
+    ctx.lineTo(121+x+x2,105+y)
+    ctx.lineTo(118+x+x2,109+y)
+    ctx.lineTo(126+x+x2,105+y)
+    ctx.lineTo(131+x+x2,99+y)
+    ctx.lineTo(134+x+x2,94+y)
+    ctx.lineTo(137+x+x2,89+y)
+    ctx.lineTo(140+x+x2,94+y)
+    ctx.lineTo(137+x+x2,102+y)
+    ctx.lineTo(133+x+x2,108+y)
+    ctx.lineTo(126+x+x2,112+y)
+    ctx.lineTo(121+x+x2,116+y)
+    ctx.lineTo(115+x+x2,120+y)
+    ctx.lineTo(110+x+x2,125+y)
+    ctx.lineTo(109+x+x2,132+y)
+    ctx.lineTo(108+x+x2,138+y)
+    ctx.lineTo(108+x+x2,146+y)
+    ctx.lineTo(109+x+x2,155+y)
+    ctx.lineTo(109+x+x2,161+y)
+    ctx.lineTo(111+x+x2,168+y)
+    ctx.lineTo(116+x+x2,174+y)
+    ctx.lineTo(117+x+x2,179+y)
+    ctx.lineTo(121+x+x2,182+y)
+    ctx.lineTo(130+x+x2,185+y)
+    ctx.moveTo(130+x+x2,187+y)
+    //ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    
+    
+    
+    
+    
+    //middle leaves
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorLeaves2;
+    ctx.moveTo(42+x,65+y)
+    ctx.lineTo(37+x,59+y)
+    ctx.lineTo(37+x,54+y)
+    ctx.lineTo(41+x,54+y)
+    ctx.lineTo(52+x,49+y)
+    ctx.lineTo(57+x,47+y)
+    ctx.lineTo(64+x,41+y)
+    ctx.lineTo(66+x,39+y)
+    ctx.lineTo(70+x,35+y)
+    ctx.lineTo(71+x,31+y)
+    ctx.lineTo(76+x,26+y)
+    ctx.lineTo(82+x,27+y)
+    ctx.lineTo(82+x,36+y)
+    ctx.lineTo(85+x,38+y)
+    ctx.lineTo(91+x,32+y)
+    ctx.lineTo(96+x,34+y)
+    ctx.lineTo(103+x,33+y)
+    ctx.lineTo(109+x,34+y)
+    ctx.lineTo(111+x,27+y)
+    ctx.lineTo(118+x,25+y)
+    ctx.lineTo(122+x,30+y)
+    ctx.lineTo(125+x,33+y)
+    ctx.lineTo(133+x,34+y)
+    ctx.lineTo(138+x,38+y)
+    ctx.lineTo(140+x,41+y)
+    ctx.lineTo(138+x,46+y)
+    ctx.lineTo(144+x,46+y)
+    ctx.lineTo(145+x,51+y)
+    ctx.lineTo(150+x,53+y)
+    ctx.lineTo(147+x,61+y)
+    ctx.lineTo(155+x,58+y)
+    ctx.lineTo(161+x,61+y)
+    ctx.lineTo(166+x,61+y)
+    ctx.lineTo(168+x,67+y)
+    ctx.lineTo(159+x,71+y)
+    ctx.lineTo(145+x,75+y)
+    ctx.lineTo(126+x,71+y)
+    ctx.lineTo(115+x,67+y)
+    ctx.lineTo(109+x,66+y)
+    ctx.lineTo(93+x,66+y)
+    ctx.lineTo(82+x,66+y)
+    ctx.lineTo(59+x,71+y)
+    ctx.lineTo(54+x,68+y)
+    ctx.lineTo(44+x,67+y)
+    ctx.fill()
+    ctx.closePath()
+    
+    
+    
+    
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorLeaves2;
+    ctx.moveTo(31+x,72+y)
+    ctx.lineTo(27+x,70+y)
+    ctx.lineTo(22+x,70+y)
+    ctx.lineTo(17+x,72+y)
+    ctx.lineTo(16+x,78+y)
+    ctx.lineTo(17+x,83+y)
+    ctx.lineTo(23+x,86+y)
+    ctx.lineTo(28+x,89+y)
+    ctx.lineTo(23+x,92+y)
+    ctx.lineTo(25+x,95+y)
+    ctx.lineTo(29+x,98+y)
+    ctx.lineTo(31+x,102+y)
+    ctx.lineTo(35+x,100+y)
+    ctx.lineTo(42+x,98+y)
+    ctx.lineTo(44+x,95+y)
+    ctx.lineTo(50+x,96+y)
+    ctx.lineTo(57+x,94+y)
+    ctx.lineTo(64+x,94+y)
+    ctx.lineTo(68+x,96+y)
+    ctx.lineTo(68+x,101+y)
+    ctx.lineTo(70+x,107+y)
+    ctx.lineTo(75+x,110+y)
+    ctx.lineTo(81+x,111+y)
+    ctx.lineTo(88+x,109+y)
+    ctx.lineTo(94+x,111+y)
+    ctx.lineTo(96+x,114+y)
+    ctx.lineTo(104+x,112+y)
+    ctx.lineTo(108+x,109+y)
+    ctx.lineTo(104+x,101+y)
+    ctx.lineTo(106+x,91+y)
+    ctx.lineTo(108+x,101+y)
+    ctx.lineTo(114+x,105+y)
+    ctx.lineTo(124+x,106+y)
+    ctx.lineTo(133+x,105+y)
+    ctx.lineTo(143+x,105+y)
+    ctx.lineTo(145+x,102+y)
+    ctx.lineTo(141+x,100+y)
+    ctx.lineTo(139+x,94+y)
+    ctx.lineTo(146+x,95+y)
+    ctx.lineTo(156+x,93+y)
+    ctx.lineTo(163+x,88+y)
+    ctx.lineTo(162+x,86+y)
+    ctx.lineTo(159+x,84+y)
+    ctx.lineTo(149+x,81+y)
+    ctx.lineTo(137+x,75+y)
+    ctx.lineTo(124+x,70+y)
+    ctx.lineTo(99+x,66+y)
+    ctx.lineTo(83+x,66+y)
+    ctx.lineTo(66+x,68+y)
+    ctx.lineTo(48+x,70+y)
+    ctx.lineTo(37+x,73+y)
+    ctx.fill()
+    ctx.closePath()
+
+    
+    //outer leaves
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorLeaves3;
+    ctx.moveTo(65+x,92+y)
+    ctx.lineTo(59+x,95+y)
+    ctx.lineTo(54+x,94+y)
+    ctx.lineTo(49+x,91+y)
+    ctx.lineTo(44+x,86+y)
+    ctx.lineTo(40+x,82+y)
+    ctx.lineTo(34+x,76+y)
+    ctx.lineTo(36+x,68+y)
+    ctx.lineTo(45+x,65+y)
+    ctx.lineTo(45+x,62+y)
+    ctx.lineTo(38+x,54+y)
+    ctx.lineTo(34+x,47+y)
+    ctx.lineTo(36+x,39+y)
+    ctx.lineTo(41+x,31+y)
+    ctx.lineTo(50+x,27+y)
+    ctx.lineTo(54+x,29+y)
+    ctx.lineTo(59+x,24+y)
+    ctx.lineTo(67+x,25+y)
+    ctx.lineTo(74+x,30+y)
+    ctx.lineTo(77+x,33+y)
+    ctx.lineTo(80+x,29+y)
+    ctx.lineTo(80+x,22+y)
+    ctx.lineTo(86+x,19+y)
+    ctx.lineTo(91+x,16+y)
+    ctx.lineTo(100+x,15+y)
+    ctx.lineTo(105+x,17+y)
+    ctx.lineTo(109+x,22+y)
+    ctx.lineTo(111+x,29+y)
+    ctx.lineTo(110+x,33+y)
+    ctx.lineTo(118+x,33+y)
+    ctx.lineTo(125+x,34+y)
+    ctx.lineTo(133+x,37+y)
+    ctx.lineTo(137+x,40+y)
+    ctx.lineTo(142+x,41+y)
+    ctx.lineTo(145+x,47+y)
+    ctx.lineTo(147+x,52+y)
+    ctx.lineTo(149+x,56+y)
+    ctx.lineTo(155+x,57+y)
+    ctx.lineTo(158+x,63+y)
+    ctx.lineTo(162+x,67+y)
+    ctx.lineTo(165+x,72+y)
+    ctx.lineTo(165+x,76+y)
+    ctx.lineTo(167+x,81+y)
+    ctx.lineTo(164+x,87+y)
+    ctx.lineTo(160+x,93+y)
+    ctx.lineTo(151+x,96+y)
+    ctx.lineTo(143+x,95+y)
+    ctx.lineTo(140+x,91+y)
+    ctx.lineTo(137+x,89+y)
+    ctx.lineTo(132+x,93+y)
+    ctx.lineTo(127+x,97+y)
+    ctx.lineTo(119+x,96+y)
+    ctx.lineTo(116+x,95+y)
+    ctx.lineTo(108+x,97+y)
+    ctx.lineTo(102+x,94+y)
+    ctx.lineTo(94+x,92+y)
+    ctx.lineTo(89+x,89+y)
+    ctx.lineTo(85+x,90+y)
+    ctx.lineTo(80+x,94+y)
+    ctx.lineTo(73+x,95+y)
+    ctx.lineTo(65+x,93+y)
+    ctx.fill()
+    //ctx.stroke()
+    ctx.closePath()
+
+    
     
     
 }
+
+
+
+function grass(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); 
+
+    
+    //patch one
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130+180,450+15);
+    ctx.lineTo(130+180,430+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128+180,450+15);
+    ctx.lineTo(125+180,435+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132+180,450+15);
+    ctx.lineTo(134+180,430+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134+180,450+15);
+    ctx.lineTo(137+180,431+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+180,450+15);
+    ctx.lineTo(128+180,432+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+180,450+15);
+    ctx.lineTo(122+180,440+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137+180,450+15);
+    ctx.lineTo(138+180,438+15);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+    
+    //patch two
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130+300,450-80);
+    ctx.lineTo(130+300,430-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128+300,450-80);
+    ctx.lineTo(125+300,435-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132+300,450-80);
+    ctx.lineTo(134+300,430-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134+300,450-80);
+    ctx.lineTo(137+300,431-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+300,450-80);
+    ctx.lineTo(128+300,432-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+300,450-80);
+    ctx.lineTo(122+300,440-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137+300,450-80);
+    ctx.lineTo(138+300,438-80);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //patch three
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130+150,450-35);
+    ctx.lineTo(130+150,430-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128+150,450-35);
+    ctx.lineTo(125+150,435-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132+150,450-35);
+    ctx.lineTo(134+150,430-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134+150,450-35);
+    ctx.lineTo(137+150,431-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+150,450-35);
+    ctx.lineTo(128+150,432-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+150,450-35);
+    ctx.lineTo(122+150,440-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137+150,450-35);
+    ctx.lineTo(138+150,438-35);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //patch four
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130+260,450);
+    ctx.lineTo(130+260,430);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128+260,450);
+    ctx.lineTo(125+260,435);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132+260,450);
+    ctx.lineTo(134+260,430);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134+260,450);
+    ctx.lineTo(137+260,431);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+260,450);
+    ctx.lineTo(128+260,432);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125+260,450);
+    ctx.lineTo(122+260,440);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137+260,450);
+    ctx.lineTo(138+260,438);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //patch five
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130-50,450-60);
+    ctx.lineTo(130-50,430-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128-50,450-60);
+    ctx.lineTo(125-50,435-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132-50,450-60);
+    ctx.lineTo(134-50,430-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134-50,450-60);
+    ctx.lineTo(137-50,431-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-50,450-60);
+    ctx.lineTo(128-50,432-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-50,450-60);
+    ctx.lineTo(122-50,440-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137-50,450-60);
+    ctx.lineTo(138-50,438-60);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    //patch six
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130-120,450-94);
+    ctx.lineTo(130-120,430-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128-120,450-94);
+    ctx.lineTo(125-120,435-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132-120,450-94);
+    ctx.lineTo(134-120,430-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134-120,450-94);
+    ctx.lineTo(137-120,431-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-120,450-94);
+    ctx.lineTo(128-120,432-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-120,450-94);
+    ctx.lineTo(122-120,440-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137-120,450-94);
+    ctx.lineTo(138-120,438-94);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //patch seven
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130,450);
+    ctx.lineTo(130,430);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128,450);
+    ctx.lineTo(125,435);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132,450);
+    ctx.lineTo(134,430);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134,450);
+    ctx.lineTo(137,431);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125,450);
+    ctx.lineTo(128,432);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125,450);
+    ctx.lineTo(122,440);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137,450);
+    ctx.lineTo(138,438);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //patch eight
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130,450-150);
+    ctx.lineTo(130,430-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128,450-150);
+    ctx.lineTo(125,435-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132,450-150);
+    ctx.lineTo(134,430-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134,450-150);
+    ctx.lineTo(137,431-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125,450-150);
+    ctx.lineTo(128,432-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125,450-150);
+    ctx.lineTo(122,440-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137,450-150);
+    ctx.lineTo(138,438-150);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    //patch nine
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(130-89,450+30);
+    ctx.lineTo(130-89,430+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(128-89,450+30);
+    ctx.lineTo(125-89,435+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(132-89,450+30);
+    ctx.lineTo(134-89,430+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(134-89,450+30);
+    ctx.lineTo(137-89,431+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-89,450+30);
+    ctx.lineTo(128-89,432+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(125-89,450+30);
+    ctx.lineTo(122-89,440+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = colorGrass;
+    ctx.moveTo(137-89,450+30);
+    ctx.lineTo(138-89,438+30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    
+    
+    
+}
+
+
+
+
+
+/*
+ //tree    
+    var colorStump = "#453424";
+    var colorLeaves = "rgba(39, 101, 39, 0.87)";
+    var colorLeaves2 = "rgba(26, 121, 44, 0.74)";
+
+    //grass
+    var colorGrass = "#3e583e";
+    var colorGrass2 = "#3e583e";
+    var colorGrass3 = "#2d7b2d";
+*/
+
+
+
 
 function mainBuilding(){
     sideWallLeft();
@@ -2875,6 +4355,16 @@ function entranceBuilding(){
     sideRoofRightEntrance();
     
 }
+
+function clouds() {
+    cloud1();
+    cloud2();
+    cloud3();
+    cloud4();
+    cloud5();
+    cloud6();
+}
+
 
 function animateSmoke(){
     var c = document.getElementById("myCanvas");
@@ -2922,14 +4412,15 @@ function animateSmoke(){
         case 12:
             smoke12();
             break;
-        
-            
-
     }
     
 }
 
 function drawHouse(){
+    ground();
+    
+    tree();
+    path();
     chimney();
     mainBuilding();
     entranceBuilding();
@@ -2948,6 +4439,8 @@ function drawHouse(){
     sideHousePlanks();
     roofBricks();
     chimneyBricks();
+    clouds();
+    grass();
     
 }
 
@@ -2958,10 +4451,9 @@ function toggleSpeed(rng){
     }, rng.value);
 }
 
-
 function main() {
     //Run main program here.
     drawHouse();
-    animation
+    animation;
     
 }
