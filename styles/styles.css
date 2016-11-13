@@ -1,7 +1,26 @@
+body {
+    font-family: Arial;
+    background-image: url("../flower.jpg");
+}
 
-
+header {
+    text-align: center;
+    color: #4b433f
+}
 
 canvas {
-    //background-color: #7cc4c4;
-    //background-color: #ccffff;
+    background-color: rgb(165, 183, 183);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div {
+    text-align: center;
+    color: #4b433f;
+}
+.info {
+    text-align: left
 }
