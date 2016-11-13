@@ -9,7 +9,7 @@ var xChange = 50;
 var yChange = 50;
 //tallnedd of triangle part of wall
 var tip = -75;
-    //back house wall
+//back house wall
 var xLeft2 = xLeft + xChange;
 var xRight2 = xRight + xChange;
 var yTop2 = yTop - yChange;
@@ -83,12 +83,14 @@ var colourInnerShade = "#654a3b";
 var colourWindow = "#d3c0b6";
 var colourBlackish = "#1d1d1d";
 var colourSideHouseWindow = "#f2e8c9";
+var colorSideHousePlatform = "#8e6666";
 var colourSmoke = "#969696";
 var colorCloud = "#FFF5EE";
 var colorGround = "#6E8B3D";
 var colorPath = "rgba(224, 116, 116, 0.53)";
 //tree    
-var colorStump = "#453424";
+var colorStump = "#3e3024";
+var colorStumpShadow = "#2c251e"
 var colorLeaves = "rgb(39, 101, 39)";
 var colorLeaves2 = "rgba(27, 60, 27, 0.43)";
 var colorLeaves3 = "rgba(31, 90, 31, 0.88)";
@@ -114,7 +116,6 @@ function frontWall() {
     ctx.lineTo(xRight, yTop);
     ctx.fill();
     ctx.closePath();
-
     //triangle part
     ctx.moveTo(xLeft, yTop);
     ctx.lineTo(xTopOfTriangle, yTopOfTriangle);
@@ -204,7 +205,6 @@ function sideRoofLeft() {
     ctx.lineTo(xMidRoofLeft, yMidRoofLeft);
     ctx.fill();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.moveTo(xMidRoofLeft, yMidRoofLeft + 5); //bottom left
     ctx.lineTo(xBotLeft - 120 + 3, yBotLeft);
@@ -385,6 +385,25 @@ function sideHouseRight() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     //SIDEPART (BACK)
+    //bottom plate
+    ctx.beginPath();
+    ctx.fillStyle = "black";
+    ctx.moveTo(280 - 6, 385 + 3); //BOT LEFT
+    ctx.lineTo(310 - 6 + 5, 385 + 3); //botRight
+    ctx.lineTo(327 + 5 + 5, 365 - 6); //TOP RIGHT
+    ctx.lineTo(300 + 20, 365 - 6); //TOP LEFT
+    ctx.lineTo(280 - 6, 385 + 3); //BOT LEFT
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.moveTo(280 - 6, 385 + 3 + 2); //BOT LEFT
+    ctx.lineTo(310 - 6 + 5, 385 + 3 + 2); //botRight
+    ctx.lineTo(327 + 5 + 5, 365 - 6 + 2); //TOP RIGHT
+    ctx.lineTo(327 + 5 + 5, 365 - 6 + 2); //TOP RIGHT
+    ctx.lineTo(300 + 20, 365 - 6 + 2); //TOP LEFT
+    ctx.stroke();
+    ctx.closePath();
     ctx.beginPath();
     //railing floor
     ctx.fillStyle = colourWall;
@@ -397,7 +416,7 @@ function sideHouseRight() {
     ctx.fill();
     ctx.closePath();
     ctx.beginPath();
-    ctx.fillStyle = "white";
+    ctx.fillStyle = colorSideHousePlatform;
     ctx.moveTo(280 - 6, 385 + 3); //BOT LEFT
     ctx.lineTo(310 - 6 + 5, 385 + 3); //botRight
     ctx.lineTo(327 + 5 + 5, 365 - 6); //TOP RIGHT
@@ -455,25 +474,6 @@ function sideHouseRight() {
     ctx.closePath();
     //---------------
     //railings
-    //bottom plate
-    ctx.beginPath();
-    ctx.fillStyle = colorGround;
-    ctx.moveTo(280 - 6, 385 + 3); //BOT LEFT
-    ctx.lineTo(310 - 6 + 5, 385 + 3); //botRight
-    ctx.lineTo(327 + 5 + 5, 365 - 6); //TOP RIGHT
-    ctx.lineTo(327 + 5 + 5, 365 - 6); //TOP RIGHT
-    ctx.lineTo(300 + 20, 365 - 6); //TOP LEFT
-    ctx.stroke();
-    ctx.fill();
-    ctx.closePath();
-    ctx.beginPath();
-    ctx.moveTo(280 - 6, 385 + 3 + 2); //BOT LEFT
-    ctx.lineTo(310 - 6 + 5, 385 + 3 + 2); //botRight
-    ctx.lineTo(327 + 5 + 5, 365 - 6 + 2); //TOP RIGHT
-    ctx.lineTo(327 + 5 + 5, 365 - 6 + 2); //TOP RIGHT
-    ctx.lineTo(300 + 20, 365 - 6 + 2); //TOP LEFT
-    ctx.stroke();
-    ctx.closePath();
     //rip rail connector
     ctx.beginPath();
     ctx.moveTo(280 - 6, 385 + 3 - 23); //BOT LEFT
@@ -821,7 +821,6 @@ function door() {
     ctx.stroke();
     ctx.fill();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.fillStyle = colourBlackish;
     ctx.moveTo(xLeft + 3, yTop); //top left
@@ -891,14 +890,12 @@ function frontWindow() {
     ctx.arc(xLeft + 7.75, yTop + 4, 7.5, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.fillStyle = colourWindow;
     ctx.moveTo(xLeft, yTop); //top left
     ctx.arc(xLeft + 10, yTop + 4, 7, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.fillStyle = colourInnerShade;
     ctx.moveTo(xLeft, yTop + 3); //top left
@@ -908,7 +905,6 @@ function frontWindow() {
     ctx.lineTo(xLeft, yTop + 3); //top left
     ctx.fill();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.fillStyle = colourWindow;
     ctx.moveTo(xLeft + 3, yTop + 3); //top left
@@ -918,7 +914,6 @@ function frontWindow() {
     ctx.lineTo(xLeft + 3, yTop + 3); //top left
     ctx.fill();
     ctx.closePath();
-
     //cross
     var xLeft = 198.25;
     var xRight = 198.75;
@@ -934,7 +929,6 @@ function frontWindow() {
     ctx.stroke();
     ctx.fill();
     ctx.closePath();
-
     var xLeft2 = 192.5;
     var xRight2 = 205;
     var yTop2 = 260.25;
@@ -2431,6 +2425,7 @@ function tree() {
     var ctx = c.getContext("2d");
     var x = 280;
     var y = 150;
+    var x2 = 2;
     //leaves part back
     ctx.beginPath();
     ctx.fillStyle = colorLeaves;
@@ -2549,7 +2544,122 @@ function tree() {
     //ctx.stroke();
     ctx.fill();
     ctx.closePath();
-    //trump and sump part
+    //stump front shadow
+    ctx.beginPath();
+    ctx.fillStyle = colorStumpShadow;
+    ctx.moveTo(130 + x + x2, 187 + y)
+    ctx.lineTo(124 + x + x2, 188 + y)
+    ctx.lineTo(128 + x + x2, 193 + y)
+    ctx.lineTo(122 + x + x2, 191 + y)
+    ctx.lineTo(118 + x + x2, 190 + y)
+    ctx.lineTo(117 + x + x2, 192 + y)
+    ctx.lineTo(113 + x + x2, 189 + y)
+    ctx.lineTo(109 + x + x2, 187 + y)
+    ctx.lineTo(112 + x + x2, 191 + y)
+    ctx.lineTo(115 + x + x2, 195 + y)
+    ctx.lineTo(109 + x + x2, 194 + y)
+    ctx.lineTo(106 + x + x2, 192 + y)
+    ctx.lineTo(102 + x + x2, 194 + y)
+    ctx.lineTo(98 + x + x2, 191 + y)
+    ctx.lineTo(92 + x + x2, 194 + y)
+    ctx.lineTo(88 + x + x2, 195 + y)
+    ctx.lineTo(85 + x + x2, 192 + y)
+    ctx.lineTo(81 + x + x2, 195 + y)
+    ctx.lineTo(74 + x + x2, 195 + y)
+    ctx.lineTo(69 + x + x2, 195 + y)
+    ctx.lineTo(74 + x + x2, 192 + y)
+    ctx.lineTo(68 + x + x2, 193 + y)
+    ctx.lineTo(62 + x + x2, 192 + y)
+    ctx.lineTo(65 + x + x2, 189 + y)
+    ctx.lineTo(71 + x + x2, 186 + y)
+    ctx.lineTo(74 + x + x2, 183 + y)
+    ctx.lineTo(78 + x + x2, 179 + y)
+    ctx.lineTo(81 + x + x2, 173 + y)
+    ctx.lineTo(83 + x + x2, 166 + y)
+    ctx.lineTo(87 + x + x2, 159 + y)
+    ctx.lineTo(85 + x + x2, 153 + y)
+    ctx.lineTo(85 + x + x2, 147 + y)
+    ctx.lineTo(85 + x + x2, 142 + y)
+    ctx.lineTo(83 + x + x2, 139 + y)
+    ctx.lineTo(78 + x + x2, 137 + y)
+    ctx.lineTo(75 + x + x2, 134 + y)
+    ctx.lineTo(73 + x + x2, 126 + y)
+    ctx.lineTo(70 + x + x2, 120 + y)
+    ctx.lineTo(68 + x + x2, 117 + y)
+    ctx.lineTo(64 + x + x2, 112 + y)
+    ctx.lineTo(58 + x + x2, 108 + y)
+    ctx.lineTo(56 + x + x2, 102 + y)
+    ctx.lineTo(53 + x + x2, 98 + y)
+    ctx.lineTo(51 + x + x2, 95 + y)
+    ctx.lineTo(56 + x + x2, 93 + y)
+    ctx.lineTo(58 + x + x2, 95 + y)
+    ctx.lineTo(61 + x + x2, 99 + y)
+    ctx.lineTo(64 + x + x2, 103 + y)
+    ctx.lineTo(67 + x + x2, 107 + y)
+    ctx.lineTo(71 + x + x2, 110 + y)
+    ctx.lineTo(74 + x + x2, 107 + y)
+    ctx.lineTo(76 + x + x2, 100 + y)
+    ctx.lineTo(76 + x + x2, 96 + y)
+    ctx.lineTo(81 + x + x2, 96 + y)
+    ctx.lineTo(80 + x + x2, 103 + y)
+    ctx.lineTo(80 + x + x2, 109 + y)
+    ctx.lineTo(81 + x + x2, 117 + y)
+    ctx.lineTo(81 + x + x2, 124 + y)
+    ctx.lineTo(85 + x + x2, 126 + y)
+    ctx.lineTo(87 + x + x2, 123 + y)
+    ctx.lineTo(87 + x + x2, 115 + y)
+    ctx.lineTo(87 + x + x2, 108 + y)
+    ctx.lineTo(86 + x + x2, 103 + y)
+    ctx.lineTo(85 + x + x2, 99 + y)
+    ctx.lineTo(84 + x + x2, 93 + y)
+    ctx.lineTo(86 + x + x2, 89 + y)
+    ctx.lineTo(90 + x + x2, 92 + y)
+    ctx.lineTo(91 + x + x2, 99 + y)
+    ctx.lineTo(93 + x + x2, 95 + y)
+    ctx.lineTo(95 + x + x2, 90 + y)
+    ctx.lineTo(98 + x + x2, 90 + y)
+    ctx.lineTo(98 + x + x2, 95 + y)
+    ctx.lineTo(96 + x + x2, 101 + y)
+    ctx.lineTo(97 + x + x2, 108 + y)
+    ctx.lineTo(96 + x + x2, 115 + y)
+    ctx.lineTo(97 + x + x2, 120 + y)
+    ctx.lineTo(101 + x + x2, 116 + y)
+    ctx.lineTo(105 + x + x2, 112 + y)
+    ctx.lineTo(110 + x + x2, 109 + y)
+    ctx.lineTo(113 + x + x2, 107 + y)
+    ctx.lineTo(113 + x + x2, 103 + y)
+    ctx.lineTo(111 + x + x2, 96 + y)
+    ctx.lineTo(119 + x + x2, 100 + y)
+    ctx.lineTo(118 + x + x2, 92 + y)
+    ctx.lineTo(124 + x + x2, 94 + y)
+    ctx.lineTo(123 + x + x2, 98 + y)
+    ctx.lineTo(121 + x + x2, 105 + y)
+    ctx.lineTo(118 + x + x2, 109 + y)
+    ctx.lineTo(126 + x + x2, 105 + y)
+    ctx.lineTo(131 + x + x2, 99 + y)
+    ctx.lineTo(134 + x + x2, 94 + y)
+    ctx.lineTo(137 + x + x2, 89 + y)
+    ctx.lineTo(140 + x + x2, 94 + y)
+    ctx.lineTo(137 + x + x2, 102 + y)
+    ctx.lineTo(133 + x + x2, 108 + y)
+    ctx.lineTo(126 + x + x2, 112 + y)
+    ctx.lineTo(121 + x + x2, 116 + y)
+    ctx.lineTo(115 + x + x2, 120 + y)
+    ctx.lineTo(110 + x + x2, 125 + y)
+    ctx.lineTo(109 + x + x2, 132 + y)
+    ctx.lineTo(108 + x + x2, 138 + y)
+    ctx.lineTo(108 + x + x2, 146 + y)
+    ctx.lineTo(109 + x + x2, 155 + y)
+    ctx.lineTo(109 + x + x2, 161 + y)
+    ctx.lineTo(111 + x + x2, 168 + y)
+    ctx.lineTo(116 + x + x2, 174 + y)
+    ctx.lineTo(117 + x + x2, 179 + y)
+    ctx.lineTo(121 + x + x2, 182 + y)
+    ctx.lineTo(130 + x + x2, 185 + y)
+    ctx.moveTo(130 + x + x2, 187 + y)
+    ctx.fill();
+    ctx.closePath();
+    //trump and stump
     ctx.beginPath();
     ctx.fillStyle = colorStump;
     ctx.moveTo(130 + x, 187 + y)
@@ -2664,122 +2774,6 @@ function tree() {
     ctx.moveTo(130 + x, 187 + y)
     ctx.fill();
     ctx.closePath();
-    //stump shadow
-    var x2 = 0;
-    ctx.beginPath();
-    ctx.fillStyle = colorStump;
-    ctx.moveTo(130 + x + x2, 187 + y)
-    ctx.lineTo(124 + x + x2, 188 + y)
-    ctx.lineTo(128 + x + x2, 193 + y)
-    ctx.lineTo(122 + x + x2, 191 + y)
-    ctx.lineTo(118 + x + x2, 190 + y)
-    ctx.lineTo(117 + x + x2, 192 + y)
-    ctx.lineTo(113 + x + x2, 189 + y)
-    ctx.lineTo(109 + x + x2, 187 + y)
-    ctx.lineTo(112 + x + x2, 191 + y)
-    ctx.lineTo(115 + x + x2, 195 + y)
-    ctx.lineTo(109 + x + x2, 194 + y)
-    ctx.lineTo(106 + x + x2, 192 + y)
-    ctx.lineTo(102 + x + x2, 194 + y)
-    ctx.lineTo(98 + x + x2, 191 + y)
-    ctx.lineTo(92 + x + x2, 194 + y)
-    ctx.lineTo(88 + x + x2, 195 + y)
-    ctx.lineTo(85 + x + x2, 192 + y)
-    ctx.lineTo(81 + x + x2, 195 + y)
-    ctx.lineTo(74 + x + x2, 195 + y)
-    ctx.lineTo(69 + x + x2, 195 + y)
-    ctx.lineTo(74 + x + x2, 192 + y)
-    ctx.lineTo(68 + x + x2, 193 + y)
-    ctx.lineTo(62 + x + x2, 192 + y)
-    ctx.lineTo(65 + x + x2, 189 + y)
-    ctx.lineTo(71 + x + x2, 186 + y)
-    ctx.lineTo(74 + x + x2, 183 + y)
-    ctx.lineTo(78 + x + x2, 179 + y)
-    ctx.lineTo(81 + x + x2, 173 + y)
-    ctx.lineTo(83 + x + x2, 166 + y)
-    ctx.lineTo(87 + x + x2, 159 + y)
-    ctx.lineTo(85 + x + x2, 153 + y)
-    ctx.lineTo(85 + x + x2, 147 + y)
-    ctx.lineTo(85 + x + x2, 142 + y)
-    ctx.lineTo(83 + x + x2, 139 + y)
-    ctx.lineTo(78 + x + x2, 137 + y)
-    ctx.lineTo(75 + x + x2, 134 + y)
-    ctx.lineTo(73 + x + x2, 126 + y)
-    ctx.lineTo(70 + x + x2, 120 + y)
-    ctx.lineTo(68 + x + x2, 117 + y)
-    ctx.lineTo(64 + x + x2, 112 + y)
-    ctx.lineTo(58 + x + x2, 108 + y)
-    ctx.lineTo(56 + x + x2, 102 + y)
-    ctx.lineTo(53 + x + x2, 98 + y)
-    ctx.lineTo(51 + x + x2, 95 + y)
-    ctx.lineTo(56 + x + x2, 93 + y)
-    ctx.lineTo(58 + x + x2, 95 + y)
-    ctx.lineTo(61 + x + x2, 99 + y)
-    ctx.lineTo(64 + x + x2, 103 + y)
-    ctx.lineTo(67 + x + x2, 107 + y)
-    ctx.lineTo(71 + x + x2, 110 + y)
-    ctx.lineTo(74 + x + x2, 107 + y)
-    ctx.lineTo(76 + x + x2, 100 + y)
-    ctx.lineTo(76 + x + x2, 96 + y)
-    ctx.lineTo(81 + x + x2, 96 + y)
-    ctx.lineTo(80 + x + x2, 103 + y)
-    ctx.lineTo(80 + x + x2, 109 + y)
-    ctx.lineTo(81 + x + x2, 117 + y)
-    ctx.lineTo(81 + x + x2, 124 + y)
-    ctx.lineTo(85 + x + x2, 126 + y)
-    ctx.lineTo(87 + x + x2, 123 + y)
-    ctx.lineTo(87 + x + x2, 115 + y)
-    ctx.lineTo(87 + x + x2, 108 + y)
-    ctx.lineTo(86 + x + x2, 103 + y)
-    ctx.lineTo(85 + x + x2, 99 + y)
-    ctx.lineTo(84 + x + x2, 93 + y)
-    ctx.lineTo(86 + x + x2, 89 + y)
-    ctx.lineTo(90 + x + x2, 92 + y)
-    ctx.lineTo(91 + x + x2, 99 + y)
-    ctx.lineTo(93 + x + x2, 95 + y)
-    ctx.lineTo(95 + x + x2, 90 + y)
-    ctx.lineTo(98 + x + x2, 90 + y)
-    ctx.lineTo(98 + x + x2, 95 + y)
-    ctx.lineTo(96 + x + x2, 101 + y)
-    ctx.lineTo(97 + x + x2, 108 + y)
-    ctx.lineTo(96 + x + x2, 115 + y)
-    ctx.lineTo(97 + x + x2, 120 + y)
-    ctx.lineTo(101 + x + x2, 116 + y)
-    ctx.lineTo(105 + x + x2, 112 + y)
-    ctx.lineTo(110 + x + x2, 109 + y)
-    ctx.lineTo(113 + x + x2, 107 + y)
-    ctx.lineTo(113 + x + x2, 103 + y)
-    ctx.lineTo(111 + x + x2, 96 + y)
-    ctx.lineTo(119 + x + x2, 100 + y)
-    ctx.lineTo(118 + x + x2, 92 + y)
-    ctx.lineTo(124 + x + x2, 94 + y)
-    ctx.lineTo(123 + x + x2, 98 + y)
-    ctx.lineTo(121 + x + x2, 105 + y)
-    ctx.lineTo(118 + x + x2, 109 + y)
-    ctx.lineTo(126 + x + x2, 105 + y)
-    ctx.lineTo(131 + x + x2, 99 + y)
-    ctx.lineTo(134 + x + x2, 94 + y)
-    ctx.lineTo(137 + x + x2, 89 + y)
-    ctx.lineTo(140 + x + x2, 94 + y)
-    ctx.lineTo(137 + x + x2, 102 + y)
-    ctx.lineTo(133 + x + x2, 108 + y)
-    ctx.lineTo(126 + x + x2, 112 + y)
-    ctx.lineTo(121 + x + x2, 116 + y)
-    ctx.lineTo(115 + x + x2, 120 + y)
-    ctx.lineTo(110 + x + x2, 125 + y)
-    ctx.lineTo(109 + x + x2, 132 + y)
-    ctx.lineTo(108 + x + x2, 138 + y)
-    ctx.lineTo(108 + x + x2, 146 + y)
-    ctx.lineTo(109 + x + x2, 155 + y)
-    ctx.lineTo(109 + x + x2, 161 + y)
-    ctx.lineTo(111 + x + x2, 168 + y)
-    ctx.lineTo(116 + x + x2, 174 + y)
-    ctx.lineTo(117 + x + x2, 179 + y)
-    ctx.lineTo(121 + x + x2, 182 + y)
-    ctx.lineTo(130 + x + x2, 185 + y)
-    ctx.moveTo(130 + x + x2, 187 + y)
-    ctx.fill();
-    ctx.closePath();
     //middle leaves
     ctx.beginPath();
     ctx.fillStyle = colorLeaves2;
@@ -2884,7 +2878,7 @@ function tree() {
     ctx.lineTo(37 + x, 73 + y)
     ctx.fill()
     ctx.closePath()
-        //outer leaves
+    //outer leaves
     ctx.beginPath();
     ctx.fillStyle = colorLeaves3;
     ctx.moveTo(65 + x, 92 + y)
