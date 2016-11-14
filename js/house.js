@@ -162,11 +162,11 @@ function sideRoofRight() {
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.fillStyle = colourRoof;
-    ctx.moveTo(xMidRoofLeft, yMidRoofLeft); //bottom left
+    ctx.moveTo(xMidRoofLeft + 5, yMidRoofLeft); //bottom left
     ctx.lineTo(xBotLeft - 3, yBotLeft);
     ctx.lineTo(xBotRight - 3, yBotRight);
     ctx.lineTo(xMidRoofRight, yMidRoofRight + 5);
-    ctx.lineTo(xMidRoofLeft, yMidRoofLeft + 5);
+    ctx.lineTo(xMidRoofLeft + 5, yMidRoofLeft + 5);
     ctx.fill();
     ctx.closePath();
     ctx.beginPath();
@@ -220,10 +220,10 @@ function roofThingy() {
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.fillStyle = colourRoof;
-    ctx.moveTo(xMidRoofLeft, yMidRoofLeft); //bottom left
-    ctx.lineTo(xMidRoofLeft, yMidRoofLeft - 10); //top left
-    ctx.lineTo(xMidRoofRight, yMidRoofRight - 10);
-    ctx.lineTo(xMidRoofRight, yMidRoofRight);
+    ctx.moveTo(xMidRoofLeft, yMidRoofLeft + 1); //bottom left
+    ctx.lineTo(xMidRoofLeft, yMidRoofLeft + 1 - 10); //top left
+    ctx.lineTo(xMidRoofRight, yMidRoofRight + 1 - 10);
+    ctx.lineTo(xMidRoofRight, yMidRoofRight + 1);
     ctx.fill();
     ctx.closePath();
 }
@@ -285,17 +285,17 @@ function frontWallEntrance() {
     ctx.beginPath();
     ctx.fillStyle = colourWall;
     ctx.beginPath();
-    ctx.moveTo(xLeftSm2 + 2 + 3, yTopSm2);
-    ctx.lineTo(xLeftSm2 + 2 + 3, yBotSm2);
+    ctx.moveTo(xLeftSm2 + 5, yTopSm2);
+    ctx.lineTo(xLeftSm2 + 5, yBotSm2);
     ctx.lineTo(xRightSm2 - 3, yBotSm2);
     ctx.lineTo(xRightSm2 - 3, yTopSm2);
     ctx.fill();
     ctx.closePath();
     //triangle part
     ctx.beginPath();
-    ctx.moveTo(xLeftSm2 + 2, yTopSm2);
-    ctx.lineTo(xTopOfTriangleSm2 + 2, yTopOfTriangleSm2);
-    ctx.lineTo(xRightSm2, yTopSm2);
+    ctx.moveTo(xLeftSm2 + 5, yTopSm2+1);
+    ctx.lineTo(xTopOfTriangleSm2 + 2, yTopOfTriangleSm2+1);
+    ctx.lineTo(xRightSm2, yTopSm2+1);
     ctx.fill();
     ctx.closePath();
 }
@@ -346,8 +346,8 @@ function sideRoofLefttEntrance() {
     ctx.beginPath();
     ctx.fillStyle = colourRoofShadeDark;
     ctx.moveTo(xMidRoofLeftEntrance, yMidRoofLeftEntrance - 10); //bottom left
-    ctx.lineTo(xBotLeftEntrance - 125 + 8, yBotLeftEntrance - 20);
-    ctx.lineTo(xBotRightEntrance - 125, yBotRightEntrance - 10);
+    ctx.lineTo(xBotLeftEntrance + 4 - 125 + 8, yBotLeftEntrance - 20);
+    ctx.lineTo(xBotRightEntrance + 6 - 125, yBotRightEntrance - 10);
     ctx.lineTo(xMidRoofRightEntrance, yMidRoofRightEntrance - 10);
     ctx.lineTo(xMidRoofLeftEntrance, yMidRoofLeftEntrance - 10);
     ctx.fill();
