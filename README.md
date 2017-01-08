@@ -1,2 +1,2 @@
 # PurpleHouse
-A Purple House built using javascript
+A Javascript House named purple house. 
